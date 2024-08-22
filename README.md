@@ -1,3 +1,5 @@
+![Inteli.Gente Banner](images/inteli.gente.png)
+
 # SCC0957 - Prática em Ciência de Dados II
 
 Este repositório possui os scripts, em formato Python Notebook (IPynb), utilizados para aquisição e análise dos dados do nosso projeto na disciplina.
