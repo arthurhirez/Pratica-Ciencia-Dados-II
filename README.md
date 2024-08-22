@@ -1,4 +1,4 @@
-![Inteli.Gente Banner](images/inteli.gente.png)
+![Inteli.Gente Banner](images/Inteli.Gente.Banner.png)
 
 # SCC0957 - Prática em Ciência de Dados II
 
