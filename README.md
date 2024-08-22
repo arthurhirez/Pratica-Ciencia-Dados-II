@@ -24,5 +24,6 @@ Optamos explorar a relação entre o nível de maturidade econômica de um munic
 <p align="center">
   <img src="images/inteli.gente.png" height="250" title="Exemplo da Cidade de São Carlos na Plataforma Inteli.Gente">
   <br>
-  <a>Fonte: https://inteligente.mcti.gov.br/municipios/sao-carlos-sp</a>
+  <a>Fonte: </a>
+  <a href="https://inteligente.mcti.gov.br/municipios/sao-carlos-sp">https://inteligente.mcti.gov.br/municipios/sao-carlos-sp<a/>
 </p>
