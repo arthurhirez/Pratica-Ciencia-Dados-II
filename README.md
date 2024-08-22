@@ -15,3 +15,14 @@ Resumo da Análise
 
 #### 2. Scrapper utilizado para extrair os dados da plataforma Inteli.Gente
 Explicação do Scrapper
+
+## Documentação
+
+### Escolha do Tema e Conjunto de Dados - 08/08/2024
+Optamos explorar a relação entre o nível de maturidade econômica de um município, calculado com base em indicadores como acesso à água, transporte e tecnologia, e seus dados de investimento público, emprego e  renda.
+
+<p align="center">
+  <img src="images/inteli.gente.png" height="250" title="Exemplo da Cidade de São Carlos na Plataforma Inteli.Gente">
+  <br>
+  <a>Fonte: https://inteligente.mcti.gov.br/municipios/sao-carlos-sp</a>
+</p>
