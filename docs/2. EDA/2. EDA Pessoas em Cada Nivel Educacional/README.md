@@ -36,7 +36,7 @@ Para compreender a distribuição das variáveis numéricas, foi gerado um **gr�
 - Esses outliers são principalmente associados a municípios com grandes populações.
 
 
-### Outliers
+## Outliers
 
 Os valores identificados como outliers pelo BoxPlot correspondem, em sua maioria, a grandes municípios brasileiros. Destacam-se as seguintes cidades:
 
@@ -74,10 +74,22 @@ Essa análise inicial destaca a necessidade de ajustes nos métodos de visualiza
 
 Contudo, essa abordagem resultaria na exclusão de muitos municípios, restringindo a análise apenas às localidades com distribuições mais homogêneas. Isso poderia comprometer a representatividade e a abrangência da análise, já que os municípios mais populosos, que frequentemente influenciam a dinâmica econômica e social, seriam desconsiderados.
 
-
+### Agrupamento por Quantil
 No entanto, agrupar os dados também não é uma tarefa trivial, pois cada região brasileira possui características distintas e únicas. Se optarmos por agrupar os dados com base na coluna Total (que representa a soma de todos os atributos), notamos que, mesmo dentro do grupo de "outliers", há valores extremamente discrepantes. Por exemplo, municípios como São Paulo e Belo Horizonte apresentam valores muito acentuados, como ilustrado na tabela anterior.
 <p align="center">
   <img src="Images/cluster_quantiles_esc.png" alt="BoxPlot das Variáveis Numéricas" width="800"/>
 </p>
 
-Esse comportamento evidencia que, mesmo ao segmentar os dados com base em um critério como o total populacional, ainda será necessário lidar com grandes disparidades dentro de cada grupo. Isso reforça a importância de desenvolver critérios adicionais para o agrupamento ou de adotar abordagens mais robustas que considerem essas diferenças regionais sem descartar informações relevantes.
+### Agrupamento por Kmeans
+O comportamento observado reforça que, mesmo ao segmentar os dados com base em um critério como o total populacional, grandes disparidades dentro de cada grupo ainda precisam ser tratadas. Isso destaca a necessidade de desenvolver critérios adicionais ou abordagens mais robustas que levem em conta as diferenças regionais, sem descartar informações relevantes.
+
+No entanto, utilizar algoritmos de clusterização, como o K-Means, sem uma análise prévia e um pré-processamento adequado, frequentemente não produz resultados satisfatórios. Por exemplo:
+
+1. Pré-processamento com Normalização:
+Após aplicar uma normalização simples, como MinMax, os valores de cada variável são escalonados para um intervalo comum (geralmente entre 0 e 1). Isso é essencial para evitar que variáveis com maior amplitude dominem o agrupamento.
+
+2. Número de Clusters:
+Ao aplicar o K-Means e utilizar a medida de Silhouette para determinar o melhor número de clusters, o resultado foi 2 clusters, indicando uma separação grosseira dos dados. Por outro lado, ao avaliar a curva do cotovelo, que mede a inércia (soma das distâncias dentro dos clusters), observamos que um valor mais adequado seria em torno de 12 clusters.
+
+<div style="display: flex; justify-content: center; align-items: center;"> <figure> <img src="Images/kmeans_minmax.png" alt="Medida de Silhueta" width="435"/> </figure> <figure> <img src="Images/cotovelo_esc.png" alt="Curva do Cotovelo" width="450"/></div>
+Essas discrepâncias demonstram que diferentes critérios de avaliação podem levar a conclusões distintas. A escolha do número ideal de clusters deve considerar não apenas as métricas quantitativas, mas também o contexto do problema e uma análise qualitativa e efetiva dos dados.
