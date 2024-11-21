@@ -174,7 +174,7 @@ A fim de compreender os dados de maneira mais granular, foi realizada a mesma an
 
 Ademais, ao variar o nível de granularidade, novamente observamos que os atributos mais importantes e o comportamento das forças entre as variáveis, como mostrado no gráfico RadViz, se alteram. Isso reforça ainda mais a ideia de que a análise de dados deve ser adaptada ao contexto e à granularidade da região em estudo. Em outras palavras, à medida que alteramos o nível de análise (seja para estados, regiões ou municípios), os resultados podem mudar significativamente, o que exige uma adaptação contínua das abordagens analíticas para capturar essas variações.
 
-Essa situação vai de encontro com a exploração anterior (CITAR NOTEBOOK), onde observamos que uma análise a nível de estado pode ser satisfatória para entender o nível econômico quando avaliamos medidas de centralidade.
+Essa situação vai de encontro com a exploração anterior [EDA Nivel Economico](docs/2.%20EDA/0.%20EDA%20Nivel%20Economico/README.md), onde observamos que uma análise a nível de estado pode ser satisfatória para entender o nível econômico quando avaliamos medidas de centralidade.
 
 1. Pernambuco
 
