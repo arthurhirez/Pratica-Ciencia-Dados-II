@@ -63,8 +63,25 @@ A princípio, visualizamos que o número de municípios por estado apresenta um 
 
 Verificando as distribuições dos municípios e seus respectivos níveis econômicos, percebemos novamente o comportamento heterogêneo entre estados próximos, como Minas Gerais e São Paulo. Embora ambos pertençam à mesma região, o Sudeste, apresentam distribuições bem distintas: São Paulo concentra mais municípios nos níveis 4 e 5, enquanto Minas Gerais se destaca nos níveis 3 e 4. Contudo, o oposto também ocorre, com estados próximos que apresentam distribuições econômicas semelhantes entre seus municípios, como é o caso de Rio Grande do Norte e Pernambuco.
 
+## Mapas e Medidas de Resumo
 
+### Análise por Estado
+<p align="center">
+  <img src="Imagens/states_nve_mmm.png" alt="Descrição da imagem" width="900"/>
+</p>
 
+Ao analisarmos as medidas estatísticas de resumo, podemos observar um comportamento interessante: conforme avançamos pelos estados brasileiros em direção ao sul, as medidas de tendência central tendem a aumentar em comparação com os estados do norte do país. No entanto, há algumas exceções, especialmente ao considerarmos os estados do Nordeste.
 
+### Análise por Região Intermediária
+<p align="center">
+  <img src="Imagens/rgmed_nve.png" alt="Descrição da imagem" width="900"/>
+</p>
 
+Ao aumentarmos a granularidade da análise, percebemos que o comportamento geral se mantém. No entanto, algumas regiões intermediárias destacam-se com níveis econômicos mais elevados. Um exemplo notável é o estado do Rio Grande do Sul. Quando analisado em sua totalidade, suas medidas de centralidade giravam em torno de 3. Porém, ao detalharmos a análise, observamos diferenças significativas dentro do próprio estado, evidenciando variações entre as regiões.
 
+### Análise por Região Imediata
+<p align="center">
+  <img src="Imagens/rgint_nve.png" alt="Descrição da imagem" width="900"/>
+</p>
+
+Por fim, ao analisarmos as regiões imediatas, identificamos o surgimento de um novo nível econômico nas medidas de resumo, em particular o nível econômico 2, que altera a escala de cores do mapa. Contudo, ao observarmos os valores, fica evidente que não há uma mudança significativa na distribuição dos níveis econômicos, especialmente ao considerarmos medidas mais robustas a outliers, como a média e a moda. Isso indica que o aumento da granularidade pode não agregar muita informação adicional. Assim, é plausível concentrar a análise no nível estadual ou, no máximo, na região intermediária.
