@@ -28,7 +28,7 @@ O conjunto de dados contém as seguintes variáveis, sem valores ausentes. Cada 
 Para compreender a distribuição das variáveis numéricas, foi gerado um **gráfico de BoxPlot**:
 
 <p align="center">
-  <img src="Images/box1_esc.png" alt="BoxPlot das Variáveis Numéricas" width="600"/>
+  <img src="Images/box1_esc.png" alt="BoxPlot das Variáveis Numéricas" width="800"/>
 </p>
 
 ### Observações sobre o BoxPlot:
@@ -69,7 +69,7 @@ Os valores identificados como outliers pelo BoxPlot correspondem, em sua maioria
 
 Essa análise inicial destaca a necessidade de ajustes nos métodos de visualização e, possivelmente, o agrupamento dos dados para uma avaliação mais clara da distribuição das variáveis. Observa-se que, ao removermos os valores considerados outliers pelo **BoxPlot**, os dados restantes apresentariam distribuições próximas a uma **distribuição Gamma**. 
 <p align="center">
-  <img src="Images/hist_esc_without_out.png" alt="BoxPlot das Variáveis Numéricas" width="600"/>
+  <img src="Images/hist_esc_without_out.png" alt="BoxPlot das Variáveis Numéricas" width="800"/>
 </p>
 
 Contudo, essa abordagem resultaria na exclusão de muitos municípios, restringindo a análise apenas às localidades com distribuições mais homogêneas. Isso poderia comprometer a representatividade e a abrangência da análise, já que os municípios mais populosos, que frequentemente influenciam a dinâmica econômica e social, seriam desconsiderados.
@@ -77,7 +77,7 @@ Contudo, essa abordagem resultaria na exclusão de muitos municípios, restringi
 
 No entanto, agrupar os dados também não é uma tarefa trivial, pois cada região brasileira possui características distintas e únicas. Se optarmos por agrupar os dados com base na coluna Total (que representa a soma de todos os atributos), notamos que, mesmo dentro do grupo de "outliers", há valores extremamente discrepantes. Por exemplo, municípios como São Paulo e Belo Horizonte apresentam valores muito acentuados, como ilustrado na tabela anterior.
 <p align="center">
-  <img src="Images/cluster_quantile_esc.png" alt="BoxPlot das Variáveis Numéricas" width="600"/>
+  <img src="Images/cluster_quantiles_esc.png" alt="BoxPlot das Variáveis Numéricas" width="800"/>
 </p>
 
 Esse comportamento evidencia que, mesmo ao segmentar os dados com base em um critério como o total populacional, ainda será necessário lidar com grandes disparidades dentro de cada grupo. Isso reforça a importância de desenvolver critérios adicionais para o agrupamento ou de adotar abordagens mais robustas que considerem essas diferenças regionais sem descartar informações relevantes.
