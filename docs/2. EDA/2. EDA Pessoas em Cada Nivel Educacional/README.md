@@ -93,3 +93,121 @@ Ao aplicar o K-Means e utilizar a medida de Silhouette para determinar o melhor 
 
 <div style="display: flex; justify-content: center; align-items: center;"> <figure> <img src="Images/kmeans_minmax.png" alt="Medida de Silhueta" width="435"/> </figure> <figure> <img src="Images/cotovelo_esc.png" alt="Curva do Cotovelo" width="450"/></div>
 Essas discrepâncias demonstram que diferentes critérios de avaliação podem levar a conclusões distintas. A escolha do número ideal de clusters deve considerar não apenas as métricas quantitativas, mas também o contexto do problema e uma análise qualitativa e efetiva dos dados.
+
+## Correlações
+Ao adicionar ao conjunto de dados a variável target "nível econômico", buscamos identificar variáveis que apresentassem relações significativas com a variável resposta. Para isso, foram utilizadas as correlações de Pearson e Spearman.
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <figure> 
+    <img src="Images/esc_corr_pearson.png" alt="Medida de Silhueta" width="435"/> 
+  </figure> 
+  <figure> 
+    <img src="Images/esc_corr_spearman.png" alt="Curva do Cotovelo" width="435"/>
+</div>
+
+#### Resultados Observados:
+1. **Correlação Linear (Pearson):** As variáveis não apresentam uma relação linear direta forte com a variável target "nível econômico".
+2. **Correlação Monotônica (Spearman):** Identificou-se uma relação monotônica moderada entre algumas variáveis e o nível econômico, sugerindo que à medida que uma variável aumenta, há uma tendência consistente (mas não linear) de aumento ou diminuição no nível econômico.
+notinica moderada, o que nos indica que explorar outras formas de relação entreas variaveis e um caminho interssante.
+
+## Análise de Variáveis
+A fimde compreender melhor como as variaveis se relacionam com o nível economicom e feito uma analise usando uma métrica de **MutualInformation** em conjunto de uma vizualização multivariada **RadViz**.
+
+### País
+<p align="center">
+  <img src="Images/radviz_pais.png" alt="Descrição da imagem" width="500"/>
+</p>
+
+Ao avaliarmos o gráfico RadViz, observamos que, dependendo do nível econômico, as forças de atração entre as variáveis podem mudar significativamente. Por exemplo:
+
+1. No nível econômico 4, há uma maior força de atração entre as variáveis 6_a_9_fundamental, 5_completo_fundamental, e Ate_5_incompleto. Isso sugere que essas variáveis possuem uma relação mais forte com o nível econômico 4, o que pode indicar uma correlação mais direta ou um padrão mais evidente nesse contexto.
+
+2. Já ao avaliarmos o nível econômico 5, as variáveis com maior força de atração mudam. Nesse caso, as variáveis 6_a_9_fundamental e 5_completo_fundamental se destacam como as mais associadas ao nível econômico 5, indicando que a relação entre essas variáveis e o nível econômico 5 é mais forte, enquanto outras variáveis, como Ate_5_incompleto, podem ter menor influência nesse nível econômico.
+
+Esses insights indicam que a relação entre as variáveis e o nível econômico não é uniforme, e pode variar conforme o nível analisado, destacando a importância de uma análise segmentada para capturar as nuances dessa interação.
+
+| **Mutual Information**   | **Valor**   |
+|--------------------------|-------------|
+| Total                    | 0.248388    |
+| Medio_completo           | 0.240373    |
+| Medio_incompleto         | 0.232157    |
+| Fundamental_completo     | 0.229774    |
+| Superior_incompleto      | 0.225763    |
+
+No entanto, ao considerarmos a informação mútua entre as variáveis observadas e a variável target (nível econômico), chegamos a resultados distintos. A tabela anterior mostra as variáveis com maior informação mútua em relação à variável resposta. Esses resultados indicam que as variáveis que apresentam uma forte associação com o nível econômico não são necessariamente as mesmas quando avaliamos todas as variáveis em conjunto.
+
+### Região
+É válido ressaltar que, dentro das mesmas regiões, o comportamento observado na análise multivariada não necessariamente segue o mesmo padrão da análise univariada.
+
+No entanto, é interessante notar que, entre diferentes regiões, o comportamento das análises muda de forma muito significativa. Ou seja, a interação entre as variáveis e a variável de interesse (nível econômico) pode variar substancialmente quando comparamos uma região a outra. Esse comportamento regionalizado reforça a complexidade dos dados e destaca a importância de considerar as características e particularidades regionais ao realizar qualquer tipo de análise.
+
+1. Centro-Oeste
+
+| **Mutual Information** | **Valor**   |
+|------------------------|-------------|
+| Superior_incompleto     | 0.263580    |
+| Total                  | 0.238159    |
+| Superior_completo      | 0.226454    |
+| 6_a_9_fundamental      | 0.209026    |
+| Medio_incompleto       | 0.207511    |
+
+2. Sul
+
+| **Mutual Information** | **Valor**   |
+|------------------------|-------------|
+| Medio_completo         | 0.285428    |
+| Medio_incompleto       | 0.262885    |
+| Superior_completo      | 0.260741    |
+| Superior_incompleto    | 0.255568    |
+| Populacao_estimada     | 0.253200    |
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <figure> 
+    <img src="Images/radviz_co.png" alt="Medida de Silhueta" width="435"/> 
+  </figure> 
+  <figure> 
+    <img src="Images/radviz_sul.png" alt="Curva do Cotovelo" width="435"/>
+</div>
+
+### Estado
+A fim de compreender os dados de maneira mais granular, foi realizada a mesma análise a nível de estado, onde observamos o mesmo comportamento citado anteriormente: o comportamento observado na análise multivariada não necessariamente segue o mesmo padrão da análise univariada.
+
+Ademais, ao variar o nível de granularidade, novamente observamos que os atributos mais importantes e o comportamento das forças entre as variáveis, como mostrado no gráfico RadViz, se alteram. Isso reforça ainda mais a ideia de que a análise de dados deve ser adaptada ao contexto e à granularidade da região em estudo. Em outras palavras, à medida que alteramos o nível de análise (seja para estados, regiões ou municípios), os resultados podem mudar significativamente, o que exige uma adaptação contínua das abordagens analíticas para capturar essas variações.
+
+Essa situação vai de encontro com a exploração anterior (CITAR NOTEBOOK), onde observamos que uma análise a nível de estado pode ser satisfatória para entender o nível econômico quando avaliamos medidas de centralidade.
+
+1. Pernambuco
+
+| **Mutual Information** | **Valor**   |
+|------------------------|-------------|
+| Medio_completo         | 0.128697    |
+| Populacao_estimada     | 0.122155    |
+| Total                  | 0.120017    |
+| Fundamental_completo   | 0.118282    |
+| 6_a_9_fundamental      | 0.114197    |
+
+2. Rio Grande do Norte
+
+| **Mutual Information** | **Valor**   |
+|------------------------|-------------|
+| Medio_completo         | 0.152899    |
+| 6_a_9_fundamental      | 0.106373    |
+| Total                  | 0.095595    |
+| Doutorado              | 0.093582    |
+| Analfabeto             | 0.084270    |
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <figure> 
+    <img src="Images/radviz_pe.png" alt="Medida de Silhueta" width="435"/> 
+  </figure> 
+  <figure> 
+    <img src="Images/radviz_rn.png" alt="Curva do Cotovelo" width="435"/>
+</div>
+
+
+
+
+
+
+
+
