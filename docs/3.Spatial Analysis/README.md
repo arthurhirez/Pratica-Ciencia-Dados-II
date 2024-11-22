@@ -27,3 +27,7 @@ fonte: https://dados.gov.br/dados/conjuntos-dados/investimento-publico
 
 </div>
 
+<p float="left">
+  <img src="./imgs/GeoTemp_PIB.gif" width="100" />
+  <img src="./imgs/GeoTemp_Invest.gif" width="100" /> 
+</p>
