@@ -9,8 +9,21 @@ Corresponde ao pagamento total (despesas do exercício pagas e restos a pagar pa
 fonte: https://dados.gov.br/dados/conjuntos-dados/investimento-publico
 
 
+## Preview resultado da análise espacial
 
-Here's a preview of the interactive map:
-![Map Preview](./imgs/GeoTemp_PIB.gif)
+<div style="display: flex; justify-content: space-around; align-items: center;">
 
-![Map Preview](./imgs/GeoTemp_Invest.gif)
+  <!-- First GIF -->
+  <div style="text-align: center;">
+    <h3>GeoTemp PIB</h3>
+    <img src="./imgs/GeoTemp_PIB.gif" alt="GeoTemp PIB" style="width: 45%; max-width: 400px;">
+  </div>
+
+  <!-- Second GIF -->
+  <div style="text-align: center;">
+    <h3>GeoTemp Invest</h3>
+    <img src="./imgs/GeoTemp_Invest.gif" alt="GeoTemp Invest" style="width: 45%; max-width: 400px;">
+  </div>
+
+</div>
+
