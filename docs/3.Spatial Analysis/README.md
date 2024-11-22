@@ -16,13 +16,13 @@ fonte: https://dados.gov.br/dados/conjuntos-dados/investimento-publico
   <!-- First GIF -->
   <div style="text-align: center;">
     <h3>GeoTemp PIB</h3>
-    <img src="./imgs/GeoTemp_PIB.gif" alt="GeoTemp PIB" style="width: 45%; max-width: 400px;">
+    <img src="./imgs/GeoTemp_PIB.gif" alt="GeoTemp PIB" style="width: 45%; max-width: 300px;">
   </div>
 
   <!-- Second GIF -->
   <div style="text-align: center;">
     <h3>GeoTemp Invest</h3>
-    <img src="./imgs/GeoTemp_Invest.gif" alt="GeoTemp Invest" style="width: 45%; max-width: 400px;">
+    <img src="./imgs/GeoTemp_Invest.gif" alt="GeoTemp Invest" style="width: 45%; max-width: 300px;">
   </div>
 
 </div>
