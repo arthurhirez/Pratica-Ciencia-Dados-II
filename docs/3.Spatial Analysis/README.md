@@ -11,23 +11,7 @@ fonte: https://dados.gov.br/dados/conjuntos-dados/investimento-publico
 
 ## Preview resultado da análise espacial
 
-<div style="display: flex; justify-content: space-around; align-items: center;">
-
-  <!-- First GIF -->
-  <div style="text-align: center;">
-    <h3>GeoTemp PIB</h3>
-    <img src="./imgs/GeoTemp_PIB.gif" alt="GeoTemp PIB" style="width: 45%; max-width: 300px;">
-  </div>
-
-  <!-- Second GIF -->
-  <div style="text-align: center;">
-    <h3>GeoTemp Invest</h3>
-    <img src="./imgs/GeoTemp_Invest.gif" alt="GeoTemp Invest" style="width: 45%; max-width: 300px;">
-  </div>
-
-</div>
-
 <p float="left">
-  <img src="./imgs/GeoTemp_PIB.gif" width="400" />
-  <img src="./imgs/GeoTemp_Invest.gif" width="400" /> 
+  <img src="./imgs/GeoTemp_PIB.gif" width="450" />
+  <img src="./imgs/GeoTemp_Invest.gif" width="450" /> 
 </p>
