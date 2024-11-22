@@ -12,6 +12,7 @@ fonte: https://dados.gov.br/dados/conjuntos-dados/investimento-publico
 ## Preview resultado da análise espacial
 
 <p float="left">
-  <img src="./imgs/GeoTemp_PIB.gif" width="450" />
-  <img src="./imgs/GeoTemp_Invest.gif" width="450" /> 
+  <img src="./imgs/GeoTemp_PIB.gif" width="500" />
+  <img src="./imgs/GeoTemp_Invest.gif" width="500" /> 
 </p>
+a) Resultados PIB per capita dos municípios         b) Resultados Investimentos Federais
