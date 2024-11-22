@@ -8,3 +8,9 @@ Corresponde ao pagamento total (despesas do exercício pagas e restos a pagar pa
 
 fonte: https://dados.gov.br/dados/conjuntos-dados/investimento-publico
 
+
+
+Here's a preview of the interactive map:
+![Map Preview](./imgs/GeoTemp_PIB.gif)
+
+![Map Preview](./imgs/GeoTemp_Invest.gif)
