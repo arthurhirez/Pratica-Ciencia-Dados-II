@@ -49,8 +49,8 @@ Optamos explorar a relação entre o nível de maturidade econômica de um munic
 
 ---
 
-1. Análise do Comportamento do Nível Econômico sob uma Perspectiva Geográfica (10/09/2024): [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/2.%20EDA/0.%20EDA%20Nivel%20Economico)
-2. Análises Exploratórias do Comportamento do Nível Econômico, Educacional e Setores Industriais (12/08/2024): [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/2.%20EDA/0.%20EDA%20Nivel%20Economico)
+1. Análise do Comportamento do Nível Econômico sob uma Perspectiva Geográfica (10/09/2024 - 21/11/2024): [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/2.%20EDA/0.%20EDA%20Nivel%20Economico)
+2. Análises Exploratórias do Comportamento do Nível Econômico, Educacional e Setores Industriais (12/08/2024 - 21/11/2024): [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/2.%20EDA/0.%20EDA%20Nivel%20Economico)
 
 ---
 
