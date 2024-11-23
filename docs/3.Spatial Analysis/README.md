@@ -17,7 +17,7 @@ Plataforma do Ministério da Ciência, Tecnologia e Inovação (MCTI) que define
 
 
 
-
+<!-- 
 ## Preview resultado da análise espacial
 
 <p float="left">
@@ -25,3 +25,4 @@ Plataforma do Ministério da Ciência, Tecnologia e Inovação (MCTI) que define
   <img src="./imgs/GeoTemp_Invest.gif" width="500" /> 
 </p>
 a) Resultados PIB per capita dos municípios         b) Resultados Investimentos Federais
+-->
