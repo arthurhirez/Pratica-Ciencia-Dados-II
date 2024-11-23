@@ -1,3 +1,4 @@
+<!-- 
 # Definição de novo objetivo - **Influência regional** 
 
 Nessa etapa do projeto, à época da execução, foi tomada a decisão de abandonar o objetivo inicial, que seria definir uma metodologia para distribuir valores de investimentos Federais, buscando modelar seu benefício para a população - e usar esses dados para inferir o nível de maturidade da cidade. Porém, conforme exposto na última seção, **não havia segurança sobre a significancia dos resultados dessa abordagem** (seriam basicamente números sem garantia de significado), portanto é tomada a decisão de projeto de investigar a dinâmica de relevância regional nos municípios paulistas.
@@ -11,6 +12,7 @@ Para isso, é expandida a base de dados, buscando realizar uma análise espaço-
 Considerando as funcionalidades da biblioteca Pysal, apresentadas na seção anterior, é feito o desenho de um experimento variando o Domínio considerado (Regiões Imediata, Intermediária, Agregada e Estadual) e a granularidade da vizinhança (Município, Imediata, Intermediária, Agregada e Estadual) para o agrupamento das cidades, que é relevante para o cálculo do *Spatial Lag* e *Hot/COld spots*. Uma descrição da metodologia é exibida abaixo, assim como a verificação realizada para conferir se os resultados obtidos estavam coerentes. É proposto um Domínio novo aos do IBGE, denominada Região Agregada é uma granularidade entre Região Intermediária e Estadual, e que foi baseada no cálculo de *Spatial Lag*, no qual são consideradas todas as Regiões Imediatas que são vizinhas à Região Imediata da cidade em análise.
 
 <!-- podia fazer melhor kkkkkk  preguiça-->
+<!-- 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Metodologia Proposta e Teste de Sanidade**
  <img src="../imgs/Interpretacoes_geral.png" width="1000" />
 
@@ -53,7 +55,6 @@ Sobre os dados de investimentos federais, nota-se um comportamento ruídoso em a
 
 São construídas 2 visualizações, uma para cada variável, e feita uma codificação de cores em que **vermelho e laranja são os menores quartis e amarelo e verde os maiores**, nessa ordem. Para permitir comparações, o período de análise é pareado para o intervalo em que existem observações para as duas variáveis. Nota-se no gráfico da esquerda, relativo ao PIB *per capita*, que as variações são suaves, e que aparentemente existe um "corredor" ligando **Campinas, Araraquara e São José do Rio Preto e Votuporanga**, que coincide com o eixo rodoviário mais desenvolvido do estado, e conecta as cidades com maior PIB *per capita*. No outro extremo, **Presidente Prudente e o Vale do Ribeira (sul do estado)** são regiões que constantemente figuram dentre as mais carentes.
 
-<!-- podia fazer melhor kkkkkk  preguiça-->
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a) Resultados PIB per capita dos municípios&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b) Resultados Investimentos Federais
 <p float="left">
   <img src="../imgs/base_pib_quartis_frame.gif" width="500" />
