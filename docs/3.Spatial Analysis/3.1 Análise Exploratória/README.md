@@ -17,6 +17,10 @@ Nesse contexto, toma-se como objetivo do trabalho estudar o **nível de maturida
 ### Dados geográficos - IBGE (2021)
 Adiciona-se à base de maturidade informações geográficas, como à qual região imediata/intermediária (classificação IBGE) e dados sobre a geometria dos municípios, utilizados nas visualizações.
 
+De acordo com definição do IBGE, substituindo as unidades mesorregionais e microrregionais, vigentes desde a década de 90, 
+- **Regiões Geográficas Imediatas** correspondem às áreas que procuram centros urbanos próximos para satisfação de necessidades imediatas como emprego, saúde, educação, compras de bens de consumo e prestação de serviços públicos;
+- **Regiões Geográficas Intermediárias** organizam as Imediatas no território a partir de uma região que oferece serviços mais complexos como serviços médicos especializados ou grandes universidades.
+
 **fonte dos dados:** https://www.ibge.gov.br/geociencias/organizacao-do-territorio/malhas-territoriais/15774-malhas.html
 
 ### Dados de investimento - Ministério da Fazenda (2023)
