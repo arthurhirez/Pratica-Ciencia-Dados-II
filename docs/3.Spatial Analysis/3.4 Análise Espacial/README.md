@@ -38,32 +38,50 @@ Buscando a comparabilidade dos resultados e robustez contra as variações entre
 Interpretando os resultados, nota-se que a Região Agregada proposta promove o diferencial de imbuir múltiplas perspectivas da relevância de uma cidade. Aliado às conclusões obtidas anteriormente, de que Domínios maiores induzem à uma maior suavização e detecção de *Hot/Cold spots*, é decidido trabalhar nas **análises finais com os Domínios de Região Agregada e Estadual, e agrupamento feito com vizinhanças de Região Intermediária.**
 
 ## Escolha da variável de análise: PIB x Investimentos
+Considerando as conclusões no item anterior, são decididos o Domínio e granularidade de vizinhança, porém ainda é necessário definir se as variáveis escolhidas (PIB *per capita* e Investimentos Federais) apresentam padrões relevantes para a análise, de forma que uma exploração nesse sentido é desenvolvida.
 
 ### Explorando padrões à nivel Estadual
+
+São selecionadas 9 municípios, de diferentes portes e regiões do estado, para realizar essa análise. Não é notado um padrão facilmente detectável, porém nota-se algumas particularidades. **Ribeirão Preto e Araraquara** tem quartis regionais de Estado e Agregada parelhos para as duas variáveis, o mesmo ocorre entre **Franca e Campinas**, **São Carlos e São Paulo** e em certa medida **Votuporanga e Presidente Prudente.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Casos selecionados para análise espaço-temporal**
  <img src="../imgs/Stats_Spatial.gif" width="1000" />
 
+Sobre os dados de investimentos federais, nota-se um comportamento ruídoso em anos eleitorais (2018 em Araraquara e São Carlos, 2022 em São Carlos, Registro e Presidente Prudente). Soma-se a isso o fato de não haver homogeneidade dos dados de investimentos em todas as localidades, e isso variar ano a ano, o que é uma tarefa difícil de modelar. Portanto, considera-se que utilizar os dados de PIB *per capita* é mais favorável, pois são menos ruidosos e refletem condições "reais" (investimentos podem demorar tempo a terem seus efeitos sentidos pela população).
 
-### Considerando dimensão Temporal - Quartis
+### Generalizando a análise dos quartis regionais
 
+São construídas 2 visualizações, uma para cada variável, e feita uma codificação de cores em que **vermelho e laranja são os menores quartis e amarelo e verde os maiores**, nessa ordem. Para permitir comparações, o período de análise é pareado para o intervalo em que existem observações para as duas variáveis. Nota-se no gráfico da esquerda, relativo ao PIB *per capita*, que as variações são suaves, e que aparentemente existe um "corredor" ligando **Campinas, Araraquara e São José do Rio Preto e Votuporanga**, que coincide com o eixo rodoviário mais desenvolvido do estado, e conecta as cidades com maior PIB *per capita*. No outro extremo, **Presidente Prudente e o Vale do Ribeira (sul do estado)** são regiões que constantemente figuram dentre as mais carentes.
 
 <!-- podia fazer melhor kkkkkk  preguiça-->
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a) Resultados PIB per capita dos municípios&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b) Resultados Investimentos Federais
 <p float="left">
-  <img src="../imgs/base_invest_quartis_frame.gif" width="500" />
-  <img src="../imgs/base_pib_quartis_frame.gif" width="500" /> 
+  <img src="../imgs/base_pib_quartis_frame.gif" width="500" />
+  <img src="../imgs/base_invest_quartis_frame.gif" width="500" /> 
 </p>
 
+Um dos motivos das observações acima pode ser parcialmente creditada ao exposto nadistruibuição de investimentos, na figura à direita. Em todo o período da análise Votuporanga recebeu investimentos, e a região de Araraquara também teve aportes constantes ao longo dos anos. Esse tipo de constância nos investimentos da região podem ter contribuído para a manutenção do PIB *per capita* mais alto na região. Porém, e Presidente Prudente são observados investimentos constantemente figurando entre os maiores, porém existe uma flutuação no PIB *per capita* da cidade.
+
+Por falta de tempo, não é possível fazer uma análise que busque correlacionar temporalmente as duas variáveis, porém é um tema interessante para trabalhos futuros. Para o presente projeto, elege-se o PIB *per capita* como variável de análise, pelos motivos já dispostos e pela falta de tempo hábil para analisar ambos os casos.
 
 
+### Consideração de *Hot/Cold spots* e comparação entre Domínios Estadual/Agregada
 
-### Considerando dimensão Temporal - Diff e HOtCold 
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a) Resultados *Hot/Cold spots*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   b) Resultados Diferença entre quartis **Agregada - Estadual**
+É conduzida uma análise dos *Hot/Cold spots* ao longo do tempo, na figura à esquerda. Nota-se que **Campinas é o único caso *Hot spot* em todo o período de análise, e que absorve a influência da capital**, bem ressalta-se a **consolidação de Araraquara como *Hot spot* regional, substituíndo Ribeirão Preto** a partir de 2015.
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a) Resultados *Hot/Cold spots* considerando PIB *per capita* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   b) Resultados Diferença entre quartis **Agregada - Estadual**
 <p float="left">
   <img src="../imgs/base_pib_spot.gif" width="500" />
   <img src="../imgs/base_pib_diff.gif" width="500" /> 
 </p>
 
+É computada a diferença entre os quartis regionais obtidos através da **Região Agregada proposta** e os obtidos a nível Estadual. Valores positivos (em tons de verde) indicam que a cidade em questão não é rica em relação ao estado, mas é rica na sua vizinhança. No oposto, valores negativos (em tons de roxo) indicam que a cidade é rica em relação ao seu estado, mas "pobre" em relação à vizinhança.  Comparando com os resultados dos casos selecionados abaixo, cores roxa indicam um padrão similar à São Paulo e São Carlos (Estado acima), cores verdes refletem casos como Votuporanga (Agregada acima) e em cinza casos como Campinas (valores semelhantes).
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Casos selecionados para análise espaço-temporal**
+ <img src="../imgs/1an_PIB.png" width="1000" />
 
 
+# COnclusão Quarta Etapa
+São conduzidas diversas análises nessa etapa do projeto. É definida a metodologia experimental, quais parâmetros e casos são contemplados, e é **proposta uma nova região, intitulada Agregada**. Estudando o caso de São Carlos - 2020, verifica-se que a metodologia produz reusltados coerentes, e nota-se os efeitos de suavização e detecção de *Hot/Cold spots* com a variação de Domínio e vizinhança agrupada, sendo concluido que perspectiva é importante para definir a influência/relevância regional. A investigação avança sobre a dinâmica da influência regioanl considerando a dimensão de tempo, sendo utilizados os quartis regionais para comparar casos, e a análise é expandida para além de São Carlos, selecionando 9 casos no estado. A **conclusão até esse ponto é a de utilizar como Domínios Estadual/Agregada, com vizinhança de região Intermediária para agregação**.
+
+Por fim, é feita uma breve análise generalizando os quartis regionais, para PIB *per capita* e Investimentos. Sâo **observados padrões interessantes**, e toca-se na superfície de como correlacionar Investimentos com PIB **per capita**. Adicionalmente é feita uma análise considerando *Hot/Cold spots* e feita a introdução de uma nova métrica, que busca sintetizar a relação entre os Domínios cOnsiderados. **Os resultados são coerentes** com as conclusões tiradas em outras etapas do projeto, de forma que **considera-se que o objetivo de explorar a dinâmica da influência/relevância regional foi atingido com sucesso**, dado o tempo disponível para a análise.
