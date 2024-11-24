@@ -1,4 +1,5 @@
-# Voltando ao contexto do Projeto - Nível de Maturidade dos municípios
+<!-- 
+# Contexto do Projeto - Nível de Maturidade dos municípios
 A fim de comparar a capacidade de descrição do nível de maturidade das cidades, é criada uma visualização com a variável original (PIB *per capita*), e as estatísticas espaciais resultantes da análise anterior: os quartis regionais médios, o valor da diferença entre quartis considerando Domínio Estadual e R. Agregada e um índice criado a partir das contagens de *Hot/Cold spots* (cada valor de *Hot* equivale a +1, e *Cold* a -1, sendo feita a contagem total e soma dos valores). Em primeiro momento são analisadas as maturidades Econômica e Sociocultural. Uma segunda análise é feita considerando todos os tipos de maturidade, mas focando nas classes majoritarias.
 
 
