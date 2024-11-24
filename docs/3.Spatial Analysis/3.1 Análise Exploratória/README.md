@@ -1,9 +1,9 @@
 # Análise e pré-processamento dos dados
 
-Nessa seção são descritas as atividades realizadas na primeira etapa do projeto, a saber a **integração** das bases escolhidas em primeiro momento, o **pré-processamento** realizado e as **análises preliminares** realizadas a partir do primeiro contato com as bases.
+Nessa seção são descritas as atividades realizadas na primeira etapa do projeto, a saber a **integração** das bases escolhidas em primeiro momento, o **pré-processamento** realizado e as **análises preliminares** a partir do primeiro contato com as bases.
 
 ## Bases escolhidas
-### Dados de maturidade das cidades - Plataforma inteli.gente (sem data divulgada)
+### Dados de maturidade das cidades - Plataforma Inteli.gente (sem data divulgada)
 
 
 De acordo com informações no site da iniciativa, 
@@ -15,7 +15,7 @@ Nesse contexto, toma-se como objetivo do trabalho estudar o **nível de maturida
 **fonte dos dados:** Scrapping realizado pelo integrante Thiago Ambiel.
 
 ### Dados geográficos - IBGE (2021)
-Adiciona-se à base de maturidade informações geográficas, como à qual região imediata/intermediária (classificação IBGE) e dados sobre a geometria dos municípios, utilizados nas visualizações.
+Adiciona-se à base de maturidade informações geográficas, como à qual região imediata/intermediária (classificação IBGE) é relacionada cada município e dados sobre a geometria dos municípios, utilizados nas visualizações.
 
 De acordo com definição do IBGE, substituindo as unidades mesorregionais e microrregionais, vigentes desde a década de 90, 
 - **Regiões Geográficas Imediatas** correspondem às áreas que procuram centros urbanos próximos para satisfação de necessidades imediatas como emprego, saúde, educação, compras de bens de consumo e prestação de serviços públicos;
@@ -25,16 +25,16 @@ De acordo com definição do IBGE, substituindo as unidades mesorregionais e mic
 
 ### Dados de investimento - Ministério da Fazenda (2023)
 
-Os dados são obtidos via "Portal de Dados Abertos" do Governo Federal, além disso também são disponibilizados os metadados (fornecem informações adicionais sobre as features). O orgão responsável pelos dados é o Ministério da Fazenda (MF), que fornece a seguinte descrição para o conjunto de dados:
+Os dados são obtidos via "Portal de Dados Abertos" do Governo Federal, além disso também são disponibilizados os metadados (fornecem informações adicionais sobre as features). O orgão responsável pelos dados é o Ministério da Fazenda (MF), e a descrição para o conjunto de dados e definição de conceitos de domínio são relacionados abaixo.
 
-- "Corresponde ao **pagamento total (despesas do exercício pagas e restos a pagar pagos) dos grupos de natureza de despesa 4 (investimentos) e 5 (inversões financeiras)**, exceto as despesas financeiras, que compõem o Orçamento Fiscal e da Seguridade Social.
-- **Investimentos** são despesas orçamentárias com **softwares** e com o **planejamento e a execução de obras**, inclusive com a aquisição de imóveis considerados necessários à realização destas últimas, e com a **aquisição de instalações, equipamentos e material permanente**.
-- **Inversões financeiras** são despesas orçamentárias com a **aquisição de imóveis ou bens de capital já em utilização**; **aquisição de títulos** representativos do capital de empresas ou entidades de qualquer espécie, já constituídas, quando a operação não importe aumento do capital; e com a constituição ou aumento do capital de empresas, além de outras despesas classificáveis neste grupo.
+- **Descrição da base:** "Corresponde ao pagamento (despesas do exercício pagas e restos a pagar pagos) dos grupos de natureza de despesa 4 (investimentos) e 5 (inversões financeiras exceto as despesas financeiras, que compõem o Orçamento Fiscal e da Seguridade Social.
+- **Investimentos:** são despesas orçamentárias com **softwares** e com o **planejamento e a execução de obras**, inclusive com a aquisição de imóveis considerados necessários à realização destas últimas, e com a **aquisição de instalações, equipamentos e material permanente**.
+- **Inversões financeiras:** são despesas orçamentárias com a **aquisição de imóveis ou bens de capital já em utilização**; **aquisição de títulos** representativos do capital de empresas ou entidades de qualquer espécie, já constituídas, quando a operação não importe aumento do capital; e com a constituição ou aumento do capital de empresas, além de outras despesas classificáveis neste grupo.
 - Os dados são obtidos a partir de consultas junto ao **Sistema Integrado de Administração Financeira do Governo Federal – SIAFI.**"
 
-No primeiro contato com a base não são encontrados valores faltantes, e o pré-processamento consiste apenas em algumas padronizações no nome das variáveis. É feita uma exploração nas variáveis categóricas, pormenorizada no notebook dessa seção, sendo as principais decisões de projeto:
+No primeiro contato com a base não são encontrados valores faltantes, e o pré-processamento consiste em padronizar o nome das variáveis. É feita uma exploração nas variáveis categóricas, pormenorizada no notebook dessa seção, e são tomadas as seguintes decisões de projeto:
 
-- **Tipo de orçamento** Focar inicialmente no Orçamento fiscal - isso permitirá verificar se o nível de investimento em orgãos públicos terá relação direta com o nível de maturidade do município;
+- **Tipo de orçamento:** Focar inicialmente no Orçamento fiscal - isso permitirá verificar se o nível de investimento em orgãos públicos terá relação direta com o nível de maturidade do município;
 - **Grupo Despesa:** Focar inicialmente em Investimentos - devido à natureza da destinação de recursos (softwares, obras, instalações, equipamentos, etc);
 - **Resultado primário:** Focar inicialmente em resultado primário e despesa no geral - um estudo sobre as despesas poderá ser realizado, talvez considerando o tipo de emenda (despesas) e a obrigatoriedade (primário);
 - **Região de aplicação:** Não contemplar investimentos que sejam no exterior, sem informação ou a nível nacional. Uma vez que a granularidade dos indicadores de maturidade é a nível municipal, a mesma granulariadade será adotada em primeiro momento.
@@ -47,13 +47,16 @@ As definições dos termos técnico estão no notebook, e a razão é induzir o 
 
 ## Visualizações exploratórias
 
-## Dados Maturidade
+### Dados Maturidade
 
 Valores em rosa/roxo representam o menor nível de maturidade (Adesão e Engajamento), e os verde os maiores (Alinhamento e Desenvolvimento). Focando a análise no nível economico, são feitas análises envolvendo o *tipo de aplicação do investimento* (primeira linha) e *regionalmente* (segunda linha). Para cada grupo, são selecionadas as variáveis *Movimento líquido* (montante investimento, na esquerda), *PIB per capita* (meio) e *ocupação da população* (direita).
 
 ![Distribuição dos investimentos em 2023 - SP](../imgs/BoxEconomico.png)
 
-- **Despesa primária (Movimento líquido):** Dividindo os investimentos em Primário e Despesa (definidos acima), para resultado primário as medianas são semelhantes não importando o nível de maturidade, enquanto entre despesas observa-se um padrão interessante de decaimento conforme maior nível de maturidade da cidade. *Isso pode indicar que cidade mais maduras tem melhores condições de governança pública*, porém uma investigação mais aprofundada é necessária;
+
+
+<!-- - **Despesa primária (Movimento líquido):** Dividindo os investimentos em Primário e Despesa (definidos acima), para resultado primário as medianas são semelhantes não importando o nível de maturidade, enquanto entre despesas observa-se que existem padrões de crescimento/decaimento conforme o nível de maturidade da cidade. Porém, o mesmo comportamento é observado tanto em relação à resultado primário quanto à despesa, indicando que fazer essa distinção não é relevante. -->
+- **Despesa primária (Movimento líquido):** Dividindo os investimentos em Primário e Despesa (definidos acima), para resultado primário as medianas são semelhantes não importando o nível de maturidade, enquanto entre despesas observa-se um padrão interessante de decaimento conforme maior nível de maturidade da cidade. *Isso pode indicar que cidade mais maduras tem melhores condições de governança pública*, porém uma investigação mais aprofundada é necessária. Variação regionais (segunda linha) são observadas.
 - **PIB e ocupação:** Observando os casos do tipo de resultado (primeira linha), nota-se o mesmo comportamento entre níveis, não importando se Resultado primário ou despesa. Se tratando dos casos agregados regionalmente (segunda linha), observa-se que existem padrões distintos entre níveis de acordo com a região.
 
 **Conclusão:** Foi verificado que, quando considerando PIB per capita e Ocupação da população, agrupar casos entre o tipo de resultado do investimento não produz padrões distintos. Quando analisados os *casos regionais são observados padrões distintos*, indicando que uma **análise regional é necessária** para tratar das heterogeneidades locais.
@@ -76,3 +79,5 @@ Possíveis análises da dimensão temporal e sua relação com o volume de recur
 # Conclusão da primeira etapa
 
 Através da análise dos box-plots com os níveis de maturidade, existem padrões regionais locais, o que será explorado nas próximas seções. Quanto às variáveis analisadas, o volume de investimentos exige uma análise aprofundada para verificar sua influência no nível de maturidade econômica. Além disso, a relação da maturidade com PIB per capita e porcentagem da população ocupada é evidente - e também será alvo de investigação nas próximas seções.
+
+Próxima etapa: **Qualidade da amostra**  [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/arthurhirez/Pratica-Ciencia-Dados-II/tree/main/docs/3.Spatial%20Analysis/3.2%20Avalia%C3%A7%C3%A3o%20Amostragem)
