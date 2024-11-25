@@ -1,6 +1,9 @@
 # Análise e pré-processamento dos dados
 
-Nessa seção são descritas as atividades realizadas na primeira etapa do projeto, a saber a **integração** das bases escolhidas em primeiro momento, o **pré-processamento** realizado e as **análises preliminares** a partir do primeiro contato com as bases.
+Nessa seção são descritas as atividades realizadas na primeira etapa do projeto, a saber a **integração** das bases escolhidas em primeiro momento, o **pré-processamento** realizado e as **análises preliminares** a partir do primeiro contato com as bases. [![Open with Colab](https://img.shields.io/badge/Open_In_Colab-0?logo=GoogleColab&color=525252)](https://colab.research.google.com/drive/1H-UFlUElqIZPWiZx-WbYY11HoXHjqUUM)
+
+
+
 
 ## Bases escolhidas
 ### Dados de maturidade das cidades - Plataforma Inteli.gente (sem data divulgada)
