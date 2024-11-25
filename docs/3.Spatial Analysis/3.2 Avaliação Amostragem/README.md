@@ -39,4 +39,4 @@ Aparentemente, as variáveis "normalizadas" apresentam proporções similares en
 Com base nas análises realizadas, elege-se os dados de PIB *per capita* como mais representativos. Ressalta-se que, nesse momento do desenvolvimento do projeto, ainda era esperado realizar a tarefa de distribuição dos valores de investimento regionalmente, de acordo com a suposição levantada no início desta seção, e o PIB *per capita** seria utilizado para correlacionar os investimentos e fazer uma regressão espacial.
 
 
-Próxima etapa:  **Exploração biblioteca GIS - Pysal**  [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/arthurhirez/Pratica-Ciencia-Dados-II/tree/main/docs/3.Spatial%20Analysis/3.3%20Estudo%20biblioteca%20Pysal)
+Próxima etapa:  **Exploração biblioteca GIS - Pysal**  [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/3.Spatial%20Analysis/3.3%20Estudo%20biblioteca%20Pysal)
