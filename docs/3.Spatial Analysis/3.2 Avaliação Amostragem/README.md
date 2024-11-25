@@ -1,5 +1,9 @@
 # Análise geográfica e Avaliação da amostra
+Dada a conclusão da última seção, é iniciada uma análise geográfica dos dados de investimento. Porém, surge um desafio logo no início da análise: a quantidade de localidade com investimentos em 2023. É feita uma suposição sobre como considerar o efeito do investimento, um estudo simplificado utilizando simulações com amostragens, e o uso de gráficos Sankey para comparar visualmente a amostra com o todo. [![Open with Colab](https://img.shields.io/badge/Open_In_Colab-0?logo=GoogleColab&color=525252)](https://colab.research.google.com/drive/1tmKiPSczKZzR_CaihnKU_KZziBKatHvG)
 
+ ## Representatividade da "amostra" de municípios com investimentos
+ 
+### Cobertura geográfica
 Dada a conclusão da última seção, é iniciada uma análise geográfica dos dados de investimento. Porém, surge um desafio logo no início da análise: a quantidade de investimentos por localidade em 2023, conforme ilustrado abaixo. Somente 1055 dos 5570 municípios brasileiros tiveram investimentos de origem Federal em 2023.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a) Municípios com investimentos Federais em 2023 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; b) Regiões Imediatas com investimentos Federais em 2023
@@ -9,10 +13,8 @@ Dada a conclusão da última seção, é iniciada uma análise geográfica dos d
  
  Mesmo com essa medida ainda existem muitas lacunas na imagem acima, de forma que **nesse momento do projeto almeja-se propor uma metodologia para inferir valores faltantes** com base no investimento em cidades vizinhas, de acordo com a suposição enunciada. Portanto, a evolução natural é realizar uma análise da qualidade e representatividade da "amostra" em mãos.
 
- ## Representatividade da "amostra" de municípios com investimentos
-
+ 
 ### Simulação através de amostragens aleatórias
-
 A primeira metodologia para verificar a representatividade das cidades em relação à realidade do Brasil é através de amostragem, sem reposição, da totatilidade das cidades. Uma vez que o número de municípios com investimento é da ordem de grandeza de mil casos, são realizadas 5000 amostragens de 1000 cidades, calculando a média, desvio padrão, primeiro e terceiro quartis. A metodologia acima é realizada com 5 variáveis de interesse, PIB *per capita*/Serviços/Indústria, População empregada e a variável criada Ocupação Populacional (que é a porcentagem de habitantes com emprego na cidade), e os resultados selecionados são exibidos abaixo.
 
 ![Descrição da Imagem](../imgs/Sample_hist.png)
