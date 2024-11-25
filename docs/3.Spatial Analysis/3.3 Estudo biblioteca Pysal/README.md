@@ -1,13 +1,18 @@
-# Experimentos com biblioteca **Pysal**
+# Experimentos com biblioteca **PySAL**
 
-Nessa seção são exibidos os resultados de experimentos realizados para conhecer as funcionalidades da biblioteca Pysal, que implementa ferramentas de GIS (*Geographic Information System*). São utilizados tutoriais disponíveis na documentação da biblioteca. Os resultados obtidos para a suavização através do uso de *Spatial Lag* e para a definição de *Hot/Cold spots* são exibidos abaixo.
+**Créditos e fonte dos códigos *Spatial lag:* ** https://pysal.org/esda/
+
+
+
+
+Nessa seção são exibidos os resultados de experimentos realizados para conhecer as funcionalidades da biblioteca Pysal, que implementa ferramentas de GIS (*Geographic Information System*). São utilizados tutoriais disponíveis na documentação da biblioteca, e é feita a referência à documentação original por sua completude, exemplos diversos e explicação detalhada sobre o método. Dessa maneira, o leitor tem acesso à uma material com implementação e vasta exploração da literatura - e pode explorar os outros módulos da biblioteca. [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/pysal/esda/blob/main/notebooks/Spatial%20Autocorrelation%20for%20Areal%20Unit%20Data.ipynb)
 
 <img src="../imgs/Pysal.gif" width="850" />
 
-**Créditos e fonte dos códigos *Spatial lag:* ** https://nbviewer.org/github/pysal/esda/blob/main/notebooks/Spatial%20Autocorrelation%20for%20Areal%20Unit%20Data.ipynb
 
 ## *Spatial lag* e Análise de *Hot/Cold spots*
-
+ Os resultados obtidos para a suavização através do uso de *Spatial Lag* e para a definição de *Hot/Cold spots* são exibidos abaixo.
+ 
 ### Definição de conceitos
 
 A definição de *Spatial lag* dada na biblioteca, e para a vizinhança $$i$$ é definido como:
