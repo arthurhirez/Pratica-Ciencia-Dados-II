@@ -24,13 +24,13 @@ Para enriquecer o projeto, são utilizados dados de bases públicas, reunindo in
 
 ## Principais resultados
 
-### Seção 1 - Scrapping, Visualização e Seleção de Features
+### Seção 1 - Scrapping, Visualização e Seleção de Features [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/1.%20Scrapper)
 Scrap (?) + Proposta metodologia Visualização /Seleção -> resultados regressão
 
-### Seção 2 - Análise Exploratória (EDA)
+### Seção 2 - Análise Exploratória (EDA) [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/2.%20EDA)
 analise geografica + clusterização e boostrap -> lidar com um modelo único seria muito improvável, conforme descemos a granularidade a relação entre os atributos mudam, mas seguir a separação geográfica do IBGE por estado pode ter um resultado satisfatório, descer mais que isso entrariamos em problemas como quantidade de dados
 
-### Seção 3 - Análise Espacial (Spatial Analysis)
+### Seção 3 - Análise Espacial (Spatial Analysis) [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/3.Spatial%20Analysis)
 O objetivo inicial seria modelar a distribuição regional de investimentos Federais, partindo da suposição que verbas aplicadas em uma cidade beneficiam seu entorno e da necessidade, dado que não são todas as cidades que recebem investimentos. Porém, no desenvolvimento do projeto foi considerado que os resultados não seriam representativos, o que levou à mudança de objetivo. A partir desse ponto, o estudo foi focado em estudar um método de como definir a influência regional das cidades, utilizando técnicas de GIS.
 
 TODO: concluir alguma coisa
