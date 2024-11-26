@@ -66,6 +66,11 @@ TODO: concluir alguma coisa
 5. Estatísticas Espaciais e Níveis de Maturidade: [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/3.Spatial%20Analysis/3.5%20Rela%C3%A7%C3%A3o%20com%20n%C3%ADveis%20de%20Maturidade)
 
 
+## Estudos futuros (????????) acho que nme precsa
+
+
+
+
 ## Links Rápidos para Acesso dos Notebooks pelo Google Colab:
 
 ### Seção 1 - Scrapping, Visualização e Seleção de Features
