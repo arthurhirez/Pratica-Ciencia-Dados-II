@@ -1,9 +1,15 @@
+GIT PySAL
+
 # Experimentos com biblioteca **PySAL**
 
 **Créditos e fonte dos códigos *Spatial lag:* ** https://pysal.org/esda/
 
 
+
+
 Nessa seção são exibidos os resultados de experimentos realizados para conhecer as funcionalidades da biblioteca Pysal, que implementa ferramentas de GIS (*Geographic Information System*). São utilizados tutoriais disponíveis na documentação da biblioteca, e é feita a referência à documentação original por sua completude, exemplos diversos e explicação detalhada sobre o método. Dessa maneira, o leitor tem acesso à uma material com implementação e vasta exploração da literatura - e pode explorar os outros módulos da biblioteca. [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/pysal/esda/blob/main/notebooks/Spatial%20Autocorrelation%20for%20Areal%20Unit%20Data.ipynb)
+
+<img src="../imgs/Pysal.gif" width="850" />
 
 
 ## *Spatial lag* e Análise de *Hot/Cold spots*
@@ -34,8 +40,8 @@ Onde:
 * $$W$$ é a soma de todos os $$w_{ij}$$ (ou seja, $$W = \sum_{i=1}^N \sum_{j=1}^N w_{ij} $$).
 
 Ou seja, é uma medida de variância local. A definição *Hot/Cold spots* é feita utilizando os quadrantes da estatística de Moran (ver a documentação Pysal, muito bem explicada por sinal, para entendimento real do método), e é feita como:
-- *Hot spot:* Primeiro quadante - determina os valores de *Spatial Lag* que aumentam em conjunto com o valor real;
-- *Cold spot:* Terceiro quadrante - determina os valores de *Spatial Lag* que diminuem em conjunto com o valor real;
+- *Hot spot:* Primeiro quadante - determina os valores de *Spatial Lag* que **aumentam** em conjunto com o valor real;
+- *Cold spot:* Terceiro quadrante - determina os valores de *Spatial Lag* que **diminuem** em conjunto com o valor real;
 - *Doughnut :* Segundo quadrante - serve como um *buffer* entre os dois primeiros casos, ou seja, uma situação intermediária;
 - *Diamond :* Quarto quadrante - Um caso a parte de *Cold spot*, em que o valor de um caso "puxa" a vizinhança de forma significante;
 
@@ -43,12 +49,21 @@ Ou seja, é uma medida de variância local. A definição *Hot/Cold spots* é fe
 
 Para clarificar as definições acima, e consolidar o domínio da bilbioteca antes de aplicá-la indiscriminadamente nos dados, é feita uma implementação experimental com os dados de PIB *per capita*. Em primeiro momento é calculada a média da vizinhança de cada cidade, ou seja, é definida a Região Imediata como vizinhança e calculada a média do PIB *per capita* das cidades que a compõem. Os resultados são exibidos abaixo, com as cores representado os quartis, sendo os tons mais escuros relativos ao primeiro e segundo quartis (PIB *per capita* mais baixo) e os tons mais claros para o terceiro e quarto quartis. São considerados  na visualização abaixo diferentes *Domínios*, a saber *Nacional, Interrregional* (Sul e Sudeste), *Regional* (Sudeste) e *Estadual* (SP), respectivamente.
 
-TODO: TERMINAR
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Agregação com valores "originais" da *Feature*
+<img src="../imgs/Espacial_demo_PIB.png" alt="Média do PIB *per capita* nas Regiões Imediatas (2021)" width="850" height="800">
+
+A partir das médias calculadas acima, é feita a ponderação conforme descrito acima, sendo obtidos os resultados de *Spatial Lag*. Seguindo as definições, também são obtidos os resultados de *Hot/Cold spot* utilizando a estatística de $$I$$ de Moran.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Regularização obtida através de *Spatial Lag*
+<img src="../imgs/Espacial_demo_Lag.png" alt="*Spatial lag* PIB *per capita* nas Regiões Imediatas (2021)" width="850" height="800">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *Hot/Cold spots* a partir da estatística $$I$$ de Moran
+<img src="../imgs/Espacial_demo_HC.png" alt="*Hot/COld spots* PIB *per capita* (2021)" width="850" height="800">
 
 # Conclusão Terceira Etapa
 
-Considera-se que foi possível dominar com certa confiança as funcionalidades da biblioteca, e portanto esta será empregada no restante das análises. Nesse ponto do desenvolvimento do projeto foi tomada uma **decisão importante**. Os resultados exibidos acima não foram imediatos, e a curva de aprendizagem não foi tão suave, porém levantou uma questão importante. Para viabilizar fazer uma regressão a nível espacial, e inferir como valores de supostos benefícios de investimentos públicos seriam dsitribuídos e afetariam sua vizinhança, uma investigação mais aprofundada é necessária.
+Considera-se que foi possível dominar, com certa confiança, as funcionalidades da biblioteca, e portanto esta será empregada no restante das análises. Nesse ponto do desenvolvimento do projeto, é tomada uma **decisão importante**. Os resultados exibidos acima não foram imediatos, e a curva de aprendizagem não foi tão suave, porém levantou uma questão importante. Para viabilizar fazer uma regressão a nível espacial, e inferir como valores de supostos benefícios de investimentos públicos seriam dsitribuídos e afetariam sua vizinhança, uma investigação mais aprofundada é necessária.
 
 O conhecimento da dinâmica de relevância regional é necessário, e portanto é decidido continuar a etapa de análise exploratória, a fim de determinar a **relevância regional utilizando dados de investimento e PIB *per capita***
 
-Próxima etapa: **Dinâmica de Influência/Relevância regional** [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/3.Spatial%20Analysis/3.4%20An%C3%A1lise%20Espacial)
+Próxima etapa: **Dinâmica de Influência/Relevância regional** [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/arthurhirez/Pratica-Ciencia-Dados-II/tree/main/docs/3.Spatial%20Analysis/3.4%20An%C3%A1lise%20Espacial)
