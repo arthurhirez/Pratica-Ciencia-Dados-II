@@ -107,8 +107,7 @@ Ao adicionar ao conjunto de dados a variável target "nível econômico", buscam
 
 #### Resultados Observados:
 1. **Correlação Linear (Pearson):** As variáveis não apresentam uma relação linear direta forte com a variável target "nível econômico".
-2. **Correlação Monotônica (Spearman):** Identificou-se uma relação monotônica moderada entre algumas variáveis e o nível econômico, sugerindo que à medida que uma variável aumenta, há uma tendência consistente (mas não linear) de aumento ou diminuição no nível econômico.
-notinica moderada, o que nos indica que explorar outras formas de relação entreas variaveis e um caminho interssante.
+2. **Correlação Monotônica (Spearman):** Identificou-se uma relação monotônica moderada entre algumas variáveis e o nível econômico, sugerindo que à medida que uma variável aumenta, há uma tendência consistente (mas não linear) de aumento ou diminuição no nível econômico, o que nos indica que explorar outras formas de relação entreas variaveis e um caminho interssante.
 
 ## Análise de Variáveis
 A fimde compreender melhor como as variaveis se relacionam com o nível economicom e feito uma analise usando uma métrica de **MutualInformation** em conjunto de uma vizualização multivariada **RadViz**.
@@ -172,9 +171,7 @@ No entanto, é interessante notar que, entre diferentes regiões, o comportament
 ### Estado
 A fim de compreender os dados de maneira mais granular, foi realizada a mesma análise a nível de estado, onde observamos o mesmo comportamento citado anteriormente: o comportamento observado na análise multivariada não necessariamente segue o mesmo padrão da análise univariada.
 
-Ademais, ao variar o nível de granularidade, novamente observamos que os atributos mais importantes e o comportamento das forças entre as variáveis, como mostrado no gráfico RadViz, se alteram. Isso reforça ainda mais a ideia de que a análise de dados deve ser adaptada ao contexto e à granularidade da região em estudo. Em outras palavras, à medida que alteramos o nível de análise (seja país, regiões ou estados), os resultados podem mudar significativamente, o que exige uma adaptação que leve em consideração as caracterísricas espacais, situação esta vai de encontro com a exploração anterior , onde observamos que uma análise a nível de estado pode ser satisfatória para entender o nível econômico quando avaliamos medidas de centralidade. 
-
-Ademais, ao variar o nível de granularidade, observamos novamente que os atributos mais relevantes e o comportamento das interações entre variáveis, conforme ilustrado pelo gráfico RadViz, sofrem alterações. Isso reforça a necessidade de adaptar a análise de dados ao contexto e à granularidade da região em estudo. Em outras palavras, à medida que o nível de análise muda (seja por país, regiões ou estados), os resultados podem variar significativamente, demandando ajustes que considerem as características espaciais específicas. Essa observação está em consonância com a exploração anterior [EDA Nivel Economico](docs/2.%20EDA/0.%20EDA%20Nivel%20Economico/README.md), onde foi identificado que uma abordagem a nível estadual pode ser satisfatória para compreender o nível econômico ao avaliar exclusivamente medidas de centralidade da variável target.
+Ademais, ao variar o nível de granularidade, observamos novamente que os atributos mais relevantes e o comportamento das interações entre variáveis, conforme ilustrado pelo gráfico RadViz, sofrem alterações. Isso reforça a necessidade de adaptar a análise de dados ao contexto e à granularidade da região em estudo. Em outras palavras, à medida que o nível de análise muda (seja por país, regiões ou estados), os resultados podem variar significativamente, demandando ajustes que considerem as características espaciais específicas. 
 
 1. Pernambuco
 
@@ -204,6 +201,7 @@ Ademais, ao variar o nível de granularidade, observamos novamente que os atribu
     <img src="Images/radviz_rn.png" alt="Curva do Cotovelo" width="435"/>
 </div>
 
+Essa observação está em consonância com a exploração anterior **EDA Nivel Economico**[![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](docs/2.%20EDA/0.%20EDA%20Nivel%20Economico/README.md), onde foi identificado que uma abordagem a nível estadual pode ser satisfatória para compreender o nível econômico ao avaliar exclusivamente medidas de centralidade da variável target.
 
 
 
