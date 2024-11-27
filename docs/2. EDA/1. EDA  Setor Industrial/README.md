@@ -3,7 +3,7 @@ A análise exploratória foi realizada para compreender melhor o conjunto de dad
 
 ## Variáveis do Conjunto de Dados
 
-Este dataset contém informações de diversos setores econômicos por município, com 5.570 entradas e 28 colunas.
+Este dataset contém informações de diversos setores econômicos por município, e suas respectivas remunerações médias, com 5.570 entradas e 28 colunas.
 
 | **Coluna**                     | **Drendarição**                                                                 |
 |--------------------------------|-------------------------------------------------------------------------------|
@@ -44,7 +44,7 @@ Este dataset contém informações de diversos setores econômicos por municípi
 
 ## Distribuição das Variáveis
 
-Para compreender a distribuição das variáveis numéricas, foi gerado um **gráfico de BoxPlot**:
+Para compreender a distribuição das variáveis numéricas, foi gerado um **gráfico de Violino**:
 
 <p align="center">
   <img src="Images/box1_renda.png" alt="BoxPlot das Variáveis Numéricas" width="800"/>
@@ -52,66 +52,50 @@ Para compreender a distribuição das variáveis numéricas, foi gerado um **gr�
 
 ### Observações sobre o BoxPlot:
 - O gráfico indica um grande número de **outliers**, o que dificulta a visualização da distribuição das variáveis.
-- Esses outliers são principalmente associados a municípios com grandes populações.
-
 
 ## Outliers
 
-Os valores identificados como outliers pelo BoxPlot correspondem, em sua maioria, a grandes municípios brasileiros. Destacam-se as seguintes cidades:
+Destacam-se as seguintes cidades com valores identificados como outliers pelo **BoxPlot**:
 
-| **Município**         | **População Total** |
-|-----------------------|----------------------|
-| São Paulo             | 5.390.446           |
-| Rio de Janeiro        | 2.339.294           |
-| Belo Horizonte        | 1.287.288           |
-| Brasília              | 1.250.053           |
-| Curitiba              | 935.984             |
-| Fortaleza             | 828.827             |
-| Salvador              | 788.195             |
-| Recife                | 703.180             |
-| Porto Alegre          | 684.076             |
-| Goiânia               | 643.009             |
-| Manaus                | 582.757             |
-| Belém                 | 433.899             |
-| Campinas              | 433.812             |
-| São Luís              | 394.063             |
-| Guarulhos             | 376.358             |
-| Barueri               | 367.439             |
-| Florianópolis         | 311.473             |
-| Campo Grande          | 307.059             |
-| Natal                 | 307.027             |
-| João Pessoa           | 301.635             |
+| **ID**   | **Município**              | **Estado** | **Total**         |
+|----------|----------------------------|------------|-------------------|
+| 4023     | Jardim Olinda              | PR         | 2.537.721,00      |
+| 4486     | São Francisco do Sul       | SC         | 14.494,82         |
+| 4518     | Treze Tílias               | SC         | 13.018,40         |
+| 3865     | Antonina                   | PR         | 11.945,33         |
+| 3998     | Indianópolis               | PR         | 11.055,09         |
+| 4629     | Carlos Barbosa             | RS         | 10.372,96         |
+| 4578     | Barra Funda                | RS         | 9.467,67          |
+| 5478     | Turvelândia                | GO         | 9.246,38          |
+| 4980     | Tenente Portela            | RS         | 9.220,27          |
+| 600      | Santo Antônio dos Lopes    | MA         | 9.199,22          |
+| 4742     | Imigrante                  | RS         | 8.596,69          |
+| 4099     | Paraíso do Norte           | PR         | 8.330,08          |
+| 1746     | Japaratuba                 | SE         | 8.187,44          |
+| 1894     | Conceição do Jacuípe       | BA         | 7.960,42          |
+| 4101     | Paranaguá                  | PR         | 7.906,95          |
+| 2144     | São Francisco do Conde     | BA         | 7.856,58          |
+| 4196     | São Manoel do Paraná       | PR         | 7.727,23          |
+| 4881     | Riozinho                   | RS         | 7.599,06          |
+| 3482     | Itirapina                  | SP         | 7.403,09          |
+| 4355     | Imbituba                   | SC         | 7.216,84          |
 
 #### Considerações:
-- Esses valores elevados refletem a concentração populacional em capitais e grandes centros urbanos.
-- Embora sejam classificados como outliers, representam um padrão natural devido às características populacionais do Brasil.
+Os valores apresentados refletem dados econômicos consolidados por município, destacando as maiores médias salariais considerando a soma de todos os setores industriais. Entre os 100 maiores valores, observa-se uma predominância dos estados de São Paulo (17), Rio Grande do Sul (17), Minas Gerais (14), Santa Catarina (11) e Paraná (11). Embora sejam classificados como outliers, esses valores representam um padrão natural, possivelmente associado ao nível de desenvolvimento econômico dos estados analisados.
 
-Essa análise inicial destaca a necessidade de ajustes nos métodos de visualização e, possivelmente, o agrupamento dos dados para uma avaliação mais clara da distribuição das variáveis. Observa-se que, ao removermos os valores considerados outliers pelo **BoxPlot**, os dados restantes apresentariam distribuições próximas a uma **distribuição Gamma**. 
+Essa análise inicial destaca a necessidade de ajustes nos métodos de visualização e, possivelmente, o agrupamento dos dados para uma avaliação mais clara da distribuição das variáveis. Observa-se que, ao removermos os valores considerados outliers pelo **BoxPlot**, os dados restantes apresentariam distribuições diversas. 
 <p align="center">
   <img src="Images/hist_renda_without_out.png" alt="BoxPlot das Variáveis Numéricas" width="800"/>
 </p>
 
-Contudo, essa abordagem resultaria na exclusão de muitos municípios, restringindo a análise apenas às localidades com distribuições mais homogêneas. Isso poderia comprometer a representatividade e a abrangência da análise, já que os municípios mais populosos, que frequentemente influenciam a dinâmica econômica e social, seriam drendaonsiderados.
+Contudo, essa abordagem resultaria em um conjunto de dados comaproximadamente 1500 municípios, limitando a análise às localidades com distribuições mais homogêneas. Essa restrição poderia comprometer tanto a representatividade quanto a abrangência do estudo, uma vez que o Brasil, devido à sua extensa dimensão geográfica, apresenta uma grande diversidade entre os municípios.
 
 ### Agrupamento por Quantil
-No entanto, agrupar os dados também não é uma tarefa trivial, pois cada região brasileira possui características distintas e únicas. Se optarmos por agrupar os dados com base na coluna Total (que representa a soma de todos os atributos), notamos que, mesmo dentro do grupo de "outliers", há valores extremamente discrepantes. Por exemplo, municípios como São Paulo e Belo Horizonte apresentam valores muito acentuados, como ilustrado na tabela anterior.
+No entanto, agrupar os dados também não é uma tarefa trivial, pois como dito a região brasileira possui características distintas e únicas. Se optarmos por agrupar os dados com base na coluna Total (que representa a soma de todos os atributos), notamos que, mesmo dentro do grupo de "outliers", há valores extremamente discrepantes. 
+
 <p align="center">
   <img src="Images/cluster_quantiles_renda.png" alt="BoxPlot das Variáveis Numéricas" width="800"/>
 </p>
-
-### Agrupamento por Kmeans
-O comportamento observado reforça que, mesmo ao segmentar os dados com base em um critério como o total populacional, grandes disparidades dentro de cada grupo ainda precisam ser tratadas. Isso destaca a necessidade de desenvolver critérios adicionais ou abordagens mais robustas que levem em conta as diferenças regionais, sem drendaartar informações relevantes.
-
-No entanto, utilizar algoritmos de clusterização, como o K-Means, sem uma análise prévia e um pré-processamento adequado, frequentemente não produz resultados satisfatórios. Por exemplo:
-
-1. Pré-processamento com Normalização:
-Após aplicar uma normalização simples, como MinMax, os valores de cada variável são rendaalonados para um intervalo comum (geralmente entre 0 e 1). Isso é essencial para evitar que variáveis com maior amplitude dominem o agrupamento.
-
-2. Número de Clusters:
-Ao aplicar o K-Means e utilizar a medida de Silhouette para determinar o melhor número de clusters, o resultado foi 2 clusters, indicando uma separação grosseira dos dados. Por outro lado, ao avaliar a curva do cotovelo, que mede a inércia (soma das distâncias dentro dos clusters), observamos que um valor mais adequado seria em torno de 12 clusters.
-
-<div style="display: flex; justify-content: center; align-items: center;"> <figure> <img src="Images/kmeans_minmax.png" alt="Medida de Silhueta" width="435"/> </figure> <figure> <img src="Images/cotovelo_renda.png" alt="Curva do Cotovelo" width="450"/></div>
-Essas discrepâncias demonstram que diferentes critérios de avaliação podem levar a conclusões distintas. A rendaolha do número ideal de clusters deve considerar não apenas as métricas quantitativas, mas também o contexto do problema e uma análise qualitativa e efetiva dos dados.
 
 ## Correlações
 Ao adicionar ao conjunto de dados a variável target "nível econômico", buscamos identificar variáveis que apresentassem relações significativas com a variável resposta. Para isso, foram utilizadas as correlações de Pearson e Spearman.
@@ -126,32 +110,33 @@ Ao adicionar ao conjunto de dados a variável target "nível econômico", buscam
 
 #### Resultados Observados:
 1. **Correlação Linear (Pearson):** As variáveis não apresentam uma relação linear direta forte com a variável target "nível econômico".
-2. **Correlação Monotônica (Spearman):** Identificou-se uma relação monotônica moderada entre algumas variáveis e o nível econômico, sugerindo que à medida que uma variável aumenta, há uma tendência consistente (mas não linear) de aumento ou diminuição no nível econômico.
-notinica moderada, o que nos indica que explorar outras formas de relação entreas variaveis e um caminho interssante.
+2. **Correlação Monotônica (Spearman):** Identificou-se uma relação monotônica moderada entre algumas variáveis e o nível econômico, sugerindo que à medida que uma variável aumenta, há uma tendência consistente (mas não linear) de aumento ou diminuição no nível econômico, o que nos indica que explorar outras formas de relação entreas variaveis e um caminho interssante.
 
 ## Análise de Variáveis
-A fimde compreender melhor como as variaveis se relacionam com o nível economicom e feito uma analise usando uma métrica de **MutualInformation** em conjunto de uma vizualização multivariada **RadViz**.
+A fim de compreender melhor como as variaveis se relacionam com o nível economicom e feito uma analise usando uma métrica de **MutualInformation** em conjunto de uma vizualização multivariada **RadViz**.
 
 ### País
 <p align="center">
   <img src="Images/radviz_pais.png" alt="Drendarição da imagem" width="500"/>
 </p>
 
-Ao avaliarmos o gráfico RadViz, observamos que, dependendo do nível econômico, as forças de atração entre as variáveis podem mudar significativamente. Por exemplo:
+Ao avaliarmos o gráfico RadViz, observamos que, dependendo do nível econômico, as forças de atração entre as variáveis podem mudar significativamente, como por exemplo:
 
-1. No nível econômico 4, há uma maior força de atração entre as variáveis 6_a_9_fundamental, 5_completo_fundamental, e Ate_5_incompleto. Isso sugere que essas variáveis possuem uma relação mais forte com o nível econômico 4, o que pode indicar uma correlação mais direta ou um padrão mais evidente nesse contexto.
+1.Nos níveis econômicos 2, 3 e 4, observa-se uma maior força de atração entre as variáveis _Adm_tecnica_profissional_, _Transporte_e_comunicacao_, _Aloj_comunicacao_ e _Medicos_odontologicos_vet_, indicando uma força mais acentuada com atributos de natureza social. 
 
-2. Já ao avaliarmos o nível econômico 5, as variáveis com maior força de atração mudam. Nesse caso, as variáveis 6_a_9_fundamental e 5_completo_fundamental se destacam como as mais associadas ao nível econômico 5, indicando que a relação entre essas variáveis e o nível econômico 5 é mais forte, enquanto outras variáveis, como Ate_5_incompleto, podem ter menor influência nesse nível econômico.
+2.Em contraste, nos níveis econômicos 5 e 6, os dados apresentam uma distribuição mais centralizada, evidenciando uma interação de forças mais equilibrada entre as variáveis.
+
+3. Por fim, destaca-se a relação evidente de municípios que demonstram dependência em uma única variável, indicando um foco concentrado na produção industrial de apenas um segmento específico.
 
 Esses insights indicam que a relação entre as variáveis e o nível econômico não é uniforme, e pode variar conforme o nível analisado, destacando a importância de uma análise segmentada para capturar as nuances dessa interação.
 
-| **Mutual Information**   | **Valor**   |
-|--------------------------|-------------|
-| Total                    | 0.248388    |
-| Medio_completo           | 0.240373    |
-| Medio_incompleto         | 0.232157    |
-| Fundamental_completo     | 0.229774    |
-| Superior_incompleto      | 0.225763    |
+| **Setor**               | **Mutual Information** |
+|--------------------------|-------------------------|
+| Indústria Mecânica       | 0.152115               |
+| Indústria Metalúrgica    | 0.150286               |
+| Ensino                   | 0.149862               |
+| Material de Transporte   | 0.149193               |
+| Papel e Gráfica          | 0.142883               |
 
 No entanto, ao considerarmos a informação mútua entre as variáveis observadas e a variável target (nível econômico), chegamos a resultados distintos. A tabela anterior mostra as variáveis com maior informação mútua em relação à variável resposta. Esses resultados indicam que as variáveis que apresentam uma forte associação com o nível econômico não são necessariamente as mesmas quando avaliamos todas as variáveis em conjunto.
 
@@ -162,23 +147,23 @@ No entanto, é interessante notar que, entre diferentes regiões, o comportament
 
 1. Centro-Oeste
 
-| **Mutual Information** | **Valor**   |
-|------------------------|-------------|
-| Superior_incompleto     | 0.263580    |
-| Total                  | 0.238159    |
-| Superior_completo      | 0.226454    |
-| 6_a_9_fundamental      | 0.209026    |
-| Medio_incompleto       | 0.207511    |
+| **Setor**                        | **Mutual Information** |
+|-----------------------------------|-------------------------|
+| Instituição Financeira           | 0.139335               |
+| Administração Pública            | 0.122155               |
+| Material de Transporte           | 0.120879               |
+| Ensino                           | 0.120518               |
+| Produção Mineral Não Metálico    | 0.120146               |
 
 2. Sul
 
-| **Mutual Information** | **Valor**   |
-|------------------------|-------------|
-| Medio_completo         | 0.285428    |
-| Medio_incompleto       | 0.262885    |
-| Superior_completo      | 0.260741    |
-| Superior_incompleto    | 0.255568    |
-| Populacao_estimada     | 0.253200    |
+| **Setor**                        | **Mutual Information** |
+|-----------------------------------|-------------------------|
+| Ensino                           | 0.153576               |
+| Material de Transporte           | 0.133967               |
+| Produção Mineral Não Metálico    | 0.122772               |
+| Papel e Gráfica                  | 0.113165               |
+| Borracha, Fumo e Couros          | 0.106680               |
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <figure> 
@@ -195,23 +180,23 @@ Ademais, ao variar o nível de granularidade, observamos novamente que os atribu
 
 1. Pernambuco
 
-| **Mutual Information** | **Valor**   |
-|------------------------|-------------|
-| Medio_completo         | 0.128697    |
-| Populacao_estimada     | 0.122155    |
-| Total                  | 0.120017    |
-| Fundamental_completo   | 0.118282    |
-| 6_a_9_fundamental      | 0.114197    |
+| **Setor**                        | **Mutual Information** |
+|-----------------------------------|-------------------------|
+| Ensino                           | 0.111056               |
+| Elétrico e Comunicação           | 0.103835               |
+| Médicos, Odontológicos e Veterinários | 0.095630          |
+| Borracha, Fumo e Couros          | 0.093769               |
+| Papel e Gráfica                  | 0.091429               |
 
 2. Rio Grande do Norte
 
-| **Mutual Information** | **Valor**   |
-|------------------------|-------------|
-| Medio_completo         | 0.152899    |
-| 6_a_9_fundamental      | 0.106373    |
-| Total                  | 0.095595    |
-| Doutorado              | 0.093582    |
-| Analfabeto             | 0.084270    |
+| **Setor**                        | **Mutual Information** |
+|-----------------------------------|-------------------------|
+| Borracha, Fumo e Couros          | 0.132849               |
+| Material de Transporte           | 0.111452               |
+| Indústria Metalúrgica            | 0.095969               |
+| Indústria Têxtil                 | 0.089044               |
+| Madeira e Mobiliário             | 0.084866               |
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <figure> 
