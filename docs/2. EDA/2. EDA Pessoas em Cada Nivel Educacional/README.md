@@ -174,8 +174,6 @@ A fim de compreender os dados de maneira mais granular, foi realizada a mesma an
 
 Ademais, ao variar o nível de granularidade, observamos novamente que os atributos mais relevantes e o comportamento das interações entre variáveis, conforme ilustrado pelo gráfico RadViz, sofrem alterações. Isso reforça a necessidade de adaptar a análise de dados ao contexto e à granularidade da região em estudo. Em outras palavras, à medida que o nível de análise muda (seja por país, regiões ou estados), os resultados podem variar significativamente, demandando ajustes que considerem as características espaciais específicas. 
 
-Essa observação está em consonância com a exploração anterior **EDA Nivel Economico**[![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](docs/2.%20EDA/0.%20EDA%20Nivel%20Economico/README.md), onde foi identificado que uma abordagem a nível estadual pode ser satisfatória para compreender o nível econômico ao avaliar exclusivamente medidas de centralidade da variável target.
-
 1. Pernambuco
 
 | **Mutual Information** | **Valor**   |
@@ -204,6 +202,7 @@ Essa observação está em consonância com a exploração anterior **EDA Nivel 
     <img src="Images/radviz_rn.png" alt="Curva do Cotovelo" width="435"/>
 </div>
 
+Essa observação está em consonância com a exploração anterior **EDA Nivel Economico**[![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](docs/2.%20EDA/0.%20EDA%20Nivel%20Economico/README.md), onde foi identificado que uma abordagem a nível estadual pode ser satisfatória para compreender o nível econômico ao avaliar exclusivamente medidas de centralidade da variável target.
 
 
 
