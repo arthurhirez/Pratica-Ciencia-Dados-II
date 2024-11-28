@@ -122,9 +122,9 @@ A fim de compreender melhor como as variaveis se relacionam com o nível economi
 
 Ao avaliarmos o gráfico RadViz, observamos que, dependendo do nível econômico, as forças de atração entre as variáveis podem mudar significativamente, como por exemplo:
 
-1.Nos níveis econômicos 2, 3 e 4, observa-se uma maior força de atração entre as variáveis _Adm_tecnica_profissional_, _Transporte_e_comunicacao_, _Aloj_comunicacao_ e _Medicos_odontologicos_vet_, indicando uma força mais acentuada com atributos de natureza social. 
+1. Nos níveis econômicos 2, 3 e 4, observa-se uma maior força de atração entre as variáveis _Adm_tecnica_profissional_, _Transporte_e_comunicacao_, _Aloj_comunicacao_ e _Medicos_odontologicos_vet_, indicando uma força mais acentuada com atributos de natureza social. 
 
-2.Em contraste, nos níveis econômicos 5 e 6, os dados apresentam uma distribuição mais centralizada, evidenciando uma interação de forças mais equilibrada entre as variáveis.
+2. Em contraste, nos níveis econômicos 5 e 6, os dados apresentam uma distribuição mais centralizada, evidenciando uma interação de forças mais equilibrada entre as variáveis.
 
 3. Por fim, destaca-se a relação evidente de municípios que demonstram dependência em uma única variável, indicando um foco concentrado na produção industrial de apenas um segmento específico.
 
@@ -138,12 +138,10 @@ Esses insights indicam que a relação entre as variáveis e o nível econômico
 | Material de Transporte   | 0.149193               |
 | Papel e Gráfica          | 0.142883               |
 
-No entanto, ao considerarmos a informação mútua entre as variáveis observadas e a variável target (nível econômico), chegamos a resultados distintos. A tabela anterior mostra as variáveis com maior informação mútua em relação à variável resposta. Esses resultados indicam que as variáveis que apresentam uma forte associação com o nível econômico não são necessariamente as mesmas quando avaliamos todas as variáveis em conjunto.
+Contudo, ao considerarmos a informação mútua entre as variáveis observadas e a variável target (nível econômico), chegamos a resultados distintos. A tabela anterior mostra as variáveis com maior informação mútua em relação à variável resposta. Esses resultados indicam que as variáveis que apresentam uma forte associação com o nível econômico não são necessariamente as mesmas quando avaliamos todas as variáveis em conjunto.
 
 ### Região
-É válido ressaltar que, dentro das mesmas regiões, o comportamento observado na análise multivariada não necessariamente segue o mesmo padrão da análise univariada.
-
-No entanto, é interessante notar que, entre diferentes regiões, o comportamento das análises muda de forma muito significativa. Ou seja, a interação entre as variáveis e a variável de interesse (nível econômico) pode variar substancialmente quando comparamos uma região a outra. Esse comportamento regionalizado reforça a complexidade dos dados e destaca a importância de considerar as características e particularidades regionais ao realizar qualquer tipo de análise.
+É válido ressaltar que, dentro das mesmas regiões, o comportamento observado na análise multivariada não necessariamente segue o mesmo padrão da análise univariada. No entanto, é interessante notar que, entre diferentes regiões, o comportamento das análises muda de forma muito significativa. Ou seja, a interação entre as variáveis e a variável de interesse (nível econômico) pode variar substancialmente quando comparamos uma região a outra. Esse comportamento regionalizado reforça a complexidade dos dados e destaca a importância de considerar as características e particularidades regionais ao realizar qualquer tipo de análise.
 
 1. Centro-Oeste
 
@@ -174,9 +172,7 @@ No entanto, é interessante notar que, entre diferentes regiões, o comportament
 </div>
 
 ### Estado
-A fim de compreender os dados de maneira mais granular, foi realizada a mesma análise a nível de estado, onde observamos o mesmo comportamento citado anteriormente: o comportamento observado na análise multivariada não necessariamente segue o mesmo padrão da análise univariada.
-
-Ademais, ao variar o nível de granularidade, observamos novamente que os atributos mais relevantes e o comportamento das interações entre variáveis, conforme ilustrado pelo gráfico RadViz, sofrem alterações. Isso reforça a necessidade de adaptar a análise de dados ao contexto e à granularidade da região em estudo. Em outras palavras, à medida que o nível de análise muda (seja por país, regiões ou estados), os resultados podem variar significativamente, demandando ajustes que considerem as características espaciais específicas. 
+Ademais, ao variar o nível de granularidade, observamos novamente que os atributos mais relevantes e o comportamento das interações entre variáveis, conforme ilustrado pelo gráfico RadViz, sofrem alterações. Isso reforça a necessidade de adaptar a análise de dados ao contexto e à granularidade da região em estudo. 
 
 1. Pernambuco
 
@@ -206,8 +202,8 @@ Ademais, ao variar o nível de granularidade, observamos novamente que os atribu
     <img src="Images/radviz_rn.png" alt="Curva do Cotovelo" width="435"/>
 </div>
 
-Essa observação está em consonância com a exploração anterior **EDA Nivel Economico**[![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](docs/2.%20EDA/0.%20EDA%20Nivel%20Economico/README.md), onde foi identificado que uma abordagem a nível estadual pode ser satisfatória para compreender o nível econômico ao avaliar exclusivamente medidas de centralidade da variável target.
-
+## Considerações Finais
+Estes insights são especialmente relevante, pois ao ajustar a granularidade e a região de análise, é possível identificar padrões de nichos industriais. Nota-se que alguns estados apresentam, predominantemente, um desenvolvimento industrial segmentado, enquanto outros exibem uma diversidade maior de fontes de desenvolvimento. Esse comportamento reforça, mais uma vez, a importância de considerar o aspecto espacial nas análises, garantindo uma compreensão mais abrangente das dinâmicas econômicas regionais.
 
 
 

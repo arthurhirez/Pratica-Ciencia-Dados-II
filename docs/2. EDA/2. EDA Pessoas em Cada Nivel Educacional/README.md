@@ -201,8 +201,9 @@ Ademais, ao variar o nível de granularidade, observamos novamente que os atribu
     <img src="Images/radviz_rn.png" alt="Curva do Cotovelo" width="435"/>
 </div>
 
-Essa observação está em consonância com a exploração anterior **EDA Nivel Economico**[![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](docs/2.%20EDA/0.%20EDA%20Nivel%20Economico/README.md), onde foi identificado que uma abordagem a nível estadual pode ser satisfatória para compreender o nível econômico ao avaliar exclusivamente medidas de centralidade da variável target.
-
+## Considerações Finais
+Esses apontamentos estão alinhadas com análises anteriores, como a **EDA Setor Industrial** [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/2.%20EDA/1.%20EDA%20Setor%20Industrial), no qual, demostra como diferentes regiões apresentam desenvolvimentos industriais variados, abrangendo tanto nichos específicos quanto setores amplamente concentrados. Em conjunto com a **EDA Nível Econômico** [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/2.%20EDA/0.%20EDA%20Nivel%20Economico)
+, onde, bserva-se que uma abordagem em nível estadual pode ser interessante para compreender o nível econômico ao considerar exclusivamente medidas de centralidade da variável alvo.
 
 
 
