@@ -2,7 +2,7 @@
 
 Plataforma do Ministério da Ciência, Tecnologia e Inovação (MCTI) que define cidades inteligentes como:
 
-"... **cidades comprometidas com o desenvolvimento urbano sustentável e a transformação digital**, em seus aspectos econômico, meio ambiente, sociocultural e de capacidade institucional, ... e **utilizam tecnologias para solucionar problemas concretos, criar oportunidades, oferecer serviços com eficiência, reduzir desigualdades,** aumentar a resiliência **e melhorar a qualidade de vida de todas as pessoas**, garantindo o **uso seguro e responsável de dados** e das tecnologias da informação e comunicação.**"
+"... **cidades comprometidas com o desenvolvimento urbano sustentável e a transformação digital**, em seus aspectos econômico, meio ambiente, sociocultural e de capacidade institucional, ... e **utilizam tecnologias para solucionar problemas concretos, criar oportunidades, oferecer serviços com eficiência, reduzir desigualdades,** aumentar a resiliência **e melhorar a qualidade de vida de todas as pessoas**, garantindo o **uso seguro e responsável de dados** e das **tecnologias da informação e comunicação.**"
 
 <br><br>
 
@@ -23,8 +23,6 @@ O projeto é dividido em 5 etapas, que são brevemente descritas como:
 5. [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/arthurhirez/Pratica-Ciencia-Dados-II/tree/main/docs/3.Spatial%20Analysis/3.5%20Rela%C3%A7%C3%A3o%20com%20n%C3%ADveis%20de%20Maturidade) **Estatísticas Espaciais e Níveis de Maturidade**: É feita a relação entre as denominadas estatísticas espaciais, obtidas no item anterior, com as informações de Maturidade obtidas na primeira etapa. Verifica-se que as estatística espaciais conseguem descrever de forma satisfatória cidades com diferentes níveis de maturidade, mesmo em casos em que a variável original falha na tarefa.
 
 
-
-<!-- 
 ## Preview resultados - Modelagem da Influência/Relevância Regional dos Municípios
 
 ### Quanto a correlação entre PIB *per capita* e Investimento Federais ao longo dos anos
@@ -54,5 +52,3 @@ Essa etapa do projeto foi a mais desafiadora - e recompensadora. É utilizada um
 As conclusões dessa etapa são que a proposta de R. Agregada como Domínio conduz a resultados relevantes, e quando aliada à consideração de vizinhanças amplas (R. Intermediária do IBGE), obtem-se resultados coerentes para a modelagem de influência regional. Com os reusltados consolidados, para Investimentos Federais e PIB *per capita*, é viabilizada a investigação das relações regionais, sendo possível inferir polos regionais, e observar a mudança de importância de certas localidades. A correlação entre Invesitmentos e PIB *per capita* é verificada, de forma superficial, e pode ser explorada mais a fundo em trabalhos futuros. Por fim, verifica-se que as estatísticas espaciais conseguem boa discriminação do nível de Maturidade, mesmo em casos em que a variável original (PIB *per capita*) falha em separar as observações.
 
 Nesse contexto, considera-se que a pesquisa teve resultados satisfatórios, e além do esperado. Apesar de não concluir o objetivo inicial, foi possível desenvolver uma exploração da dinâmica de relevância regional, e trabalhos futuros podem aprofundar questões como a correlação entre diferentes variáveis (relacionando PIB *per capita* com ocupação da população e investimentos), e com esse resultado em mãos, avançar sobre o desafio de modelar o efeito de benefícios indiretos na vizinhança.
-
--->
