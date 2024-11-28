@@ -83,4 +83,4 @@ Possíveis análises da dimensão temporal e sua relação com o volume de recur
 
 Através da análise dos box-plots com os níveis de maturidade, existem padrões regionais locais, o que será explorado nas próximas seções. Quanto às variáveis analisadas, o volume de investimentos exige uma análise aprofundada para verificar sua influência no nível de maturidade econômica. Além disso, a relação da maturidade com PIB per capita e porcentagem da população ocupada é evidente - e também será alvo de investigação nas próximas seções.
 
-Próxima etapa: **Qualidade da amostra**  [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/3.Spatial%20Analysis/3.2%20Avalia%C3%A7%C3%A3o%20Amostragem)
+Próxima etapa: **Qualidade da amostra**  [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/arthurhirez/Pratica-Ciencia-Dados-II/tree/main/docs/3.Spatial%20Analysis/3.2%20Avalia%C3%A7%C3%A3o%20Amostragem)
