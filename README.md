@@ -39,7 +39,7 @@ Para enriquecer o projeto, são utilizados dados de bases públicas, reunindo in
 - Por fim, foram estudados a qualidade desses atributos para estimativa do nível de maturidade econômico das cidades. Os modelos testados foram: `Regressão Linear`, `SVR com Kernel Linear` e `SVR com Kernel Radial`. Esses modelos foram escolhidos para testar a capacidade descritiva de cada conjunto de atributos de forma linear e não-linear.
 	- Com essa análise, ficou claro que os atributos dos conjuntos `Bem Comportados` e `Bem Comportados e Pouco Correlacionados` são mais descritivos do que os conjuntos `Mal Comportados` e `Mal Comportados e Pouco Correlacionados`. Na maioria dos casos, a variante do conjunto com atributos pouco correlacionados não superou o conjunto de atributos original.
 	- O conjunto de atributos `Bem-Comportados + Mal-Comportados`, que junta os atributos selecionados após o filtro de correlação de ambos os grupos, se mostrou ideal quando a capacidade preditiva é prioridade.
-	- O conjunto de atributos `Mal Comportados e Pouco Correlacionados` se mostrou ideal quando o menor número de atributos possível é prioridade.
+	- O conjunto de atributos `Mal-Comportados e Pouco Correlacionados` se mostrou ideal quando o menor número de atributos possível é prioridade. Apesar dos conjuntos de atributos `Bem-Comportados` serem mais descritivos, a diferença entre eles não é tão grande. No entanto, a diferença no número de atributos é grande.
 
 
 ### Seção 2 - Análise Exploratória (EDA) [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/2.%20EDA)
