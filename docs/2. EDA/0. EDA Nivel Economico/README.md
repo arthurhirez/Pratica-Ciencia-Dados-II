@@ -85,3 +85,6 @@ Ao aumentarmos a granularidade da análise, percebemos que o comportamento geral
 </p>
 
 Por fim, ao analisarmos as regiões imediatas, identificamos o surgimento de um novo nível econômico nas medidas de resumo, em particular o nível econômico 2, que altera a escala de cores do mapa. Contudo, ao observarmos os valores, fica evidente que não há uma mudança significativa na distribuição dos níveis econômicos, especialmente ao considerarmos medidas mais robustas a outliers, como a média e a moda. Isso indica que o aumento da granularidade pode não agregar muita informação adicional. Assim, é plausível concentrar a análise no nível estadual ou, no máximo, na região intermediária.
+
+## Considerações Finais
+A investigação do nível de maturidade econômico por meio de análises e modelos no nível estadual pode apresentar resultados consistentes e satisfatórios, isto, analisando a priori as estatisticas de resumo. No entanto, para análises exploratórias, utilizar uma granularidade menor, como as regiões intermediárias ou imediatas, pode ser mais interessante. Contudo, o desenvolvimento de modelos nesse nível enfrentaria limitações relacionadas à quantidade e qualidade dos dados disponíveis.
