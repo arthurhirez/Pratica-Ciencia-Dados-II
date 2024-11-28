@@ -66,4 +66,4 @@ Considera-se que foi possível dominar, com certa confiança, as funcionalidades
 
 O conhecimento da dinâmica de relevância regional é necessário, e portanto é decidido continuar a etapa de análise exploratória, a fim de determinar a **relevância regional utilizando dados de investimento e PIB *per capita***
 
-Próxima etapa: **Dinâmica de Influência/Relevância regional** [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/arthurhirez/Pratica-Ciencia-Dados-II/tree/main/docs/3.Spatial%20Analysis/3.4%20An%C3%A1lise%20Espacial)
+Próxima etapa: **Dinâmica de Influência/Relevância regional** [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/3.Spatial%20Analysis/3.4%20An%C3%A1lise%20Espacial)
