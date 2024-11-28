@@ -202,7 +202,8 @@ Ademais, ao variar o nível de granularidade, observamos novamente que os atribu
     <img src="Images/radviz_rn.png" alt="Curva do Cotovelo" width="435"/>
 </div>
 
-Estas observalções são especialmente relevante, pois ao ajustar a granularidade e a região de análise, é possível identificar padrões de nichos industriais. Nota-se que alguns estados apresentam, predominantemente, um desenvolvimento industrial segmentado, enquanto outros exibem uma diversidade maior de fontes de desenvolvimento. Esse comportamento reforça, mais uma vez, a importância de considerar o aspecto espacial nas análises, garantindo uma compreensão mais abrangente das dinâmicas econômicas regionais.
+## Considerações Finais
+Estes insights são especialmente relevante, pois ao ajustar a granularidade e a região de análise, é possível identificar padrões de nichos industriais. Nota-se que alguns estados apresentam, predominantemente, um desenvolvimento industrial segmentado, enquanto outros exibem uma diversidade maior de fontes de desenvolvimento. Esse comportamento reforça, mais uma vez, a importância de considerar o aspecto espacial nas análises, garantindo uma compreensão mais abrangente das dinâmicas econômicas regionais.
 
 
 
