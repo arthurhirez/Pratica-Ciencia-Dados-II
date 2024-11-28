@@ -79,7 +79,7 @@ Por falta de tempo, não é possível fazer uma análise que busque correlaciona
  <img src="../imgs/1an_PIB.png" width="1000" />
 
 
-# Conclusão Quarta Etapa
+# Conclusão da quarta etapa
 São conduzidas diversas análises nessa etapa. É definida a metodologia experimental, quais parâmetros e casos são contemplados, e é **proposta uma nova região, intitulada Agregada**. Estudando São Carlos em 2020, verifica-se que a metodologia produz reusltados coerentes, e nota-se os efeitos de suavização e detecção de *Hot/Cold spots* dada a variação de Domínio e vizinhança, sendo concluido que perspectiva é importante para definir a importancia regional. A investigação avança sobre a dinâmica da influência regional, considerando a dimensão de tempo, utilizando quartis regionais para comparar casos. A análise é expandida para além de São Carlos, selecionando 9 casos no estado, e a **conclusão nesse ponto é a de utilizar como Domínios Estadual/Agregada, com vizinhança de região Intermediária para agregação**.
 
 Por fim, é feita uma breve análise generalizando os quartis regionais, para PIB *per capita* e Investimentos. Sâo **observados padrões interessantes**, e toca-se na superfície de como correlacionar Investimentos com PIB *per capita*. Adicionalmente, é feita uma análise considerando *Hot/Cold spots*, e feita a introdução de uma nova métrica, que busca sintetizar a relação entre os Domínios considerados. **Os resultados são coerentes** com as conclusões tiradas em outras etapas do projeto, de forma que **considera-se que o objetivo de explorar a dinâmica da influência/relevância regional foi atingido com sucesso**, dado o tempo disponível para a análise.
