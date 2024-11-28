@@ -44,8 +44,57 @@ Contudo, o resultado final não apresentou uma visualização satisfatória. Al�
 Esse aspecto que também foi identificado nos resultados da análise **EDA Pessoas em Cada Nível Educacional** [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/2.%20EDA/2.%20EDA%20Pessoas%20em%20Cada%20Nivel%20Educacional), na seção de **Outliers**, no qual, evidenciou que a geração de clusters consistentes - utilizando o algoritmo **KMeans**, também baseado em distância - é um processo desafiador, quando se considera apenas os dados disponíveis, sem integrar o contexto espacial dos dados.
 
 ## Bootstrap e Normalização MinMax
+A transformação **MinMax** foi aplicada aos dados de entrada antes da execução do algoritmo de clusterização, escalonando os dados para um intervalo fixo entre 0 e 1.
+
+- **Silhuete Score:** Sem alterações, em cada amostra aleatória o melhor número de clusters permaneceu consistentemente como 2.
+- **Davies Bouldin Score:** Apresentou variações ao longo das amostras aleatórias, indicando valores maiores, como 5 clusters em alguns casos. Contudo, a maioria dos resultados manteve-se concentrada em torno de 2 a 3 clusters.
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <figure> 
+    <img src="Images/sil_pais.png" alt="Medida de Silhueta" width="435"/> 
+  </figure> 
+  <figure> 
+    <img src="Images/db_pais.png" alt="Curva do Cotovelo" width="435"/>
+</div>
+
 
 ## Boostrap e Normalização por Tamanho da Populção
+Divisão dos atributos do município pela sua população estimada, antes da aplicação do algoritmo de clusterização, visando ajustar os dados e eliminar o impacto da magnitude populacional.
 
+- **Silhuete Score:** Sem alterações, em cada amostra aleatória o melhor número de clusters permaneceu consistentemente como 2.
+- **Davies Bouldin Score:** Apresentou variações ao longo das amostras aleatórias, indicando valores maiores, como 5 clusters em alguns casos. Contudo, a maioria dos resultados manteve-se concentrada em torno de 2 a 3 clusters.
+- **Resultado:** Não muito satisfatório.
+<div style="display: flex; justify-content: center; align-items: center;">
+  <figure> 
+    <img src="Images/sil_minmax.png" alt="Medida de Silhueta" width="435"/> 
+  </figure> 
+  <figure> 
+    <img src="Images/db_minmax.png" alt="Curva do Cotovelo" width="435"/>
+</div>
+
+A abordagem não se mostrou eficaz na criação de clusters significativos. O modelo acabou separando os dados em apenas dois clusters, que foram:
+1. 5.488 municípios com características diversas.
+2. São Paulo e Rio de Janeiro, que foram agrupados devido os altos valores das suas características econômicas e populacionais.
+    
 ## Boostrap e Normalização pelo Atributo Total (Renda e Frequência)
+Divisão dos atributos do município pela soma total dos seus respectivos atributos. Esse processo ajuda a ajustar as variáveis para refletirem a proporção de cada atributo em relação ao total, de modo a minimizar o efeito de discrepâncias nas magnitudes dos atributos.
 
+- **Silhuete Score:** Apresentou variações ao longo das amostras aleatórias, definindo o melhor número de clusters como 3.
+- **Davies Bouldin Score:** Apresentou variações ao longo das amostras aleatórias, indicando valores maiores, como 14 clusters em alguns casos. Contudo, a maioria dos resultados manteve-se concentrada em torno de 3 a 4 clusters.
+<div style="display: flex; justify-content: center; align-items: center;">
+  <figure> 
+    <img src="Images/sil_tot.png" alt="Medida de Silhueta" width="435"/> 
+  </figure> 
+  <figure> 
+    <img src="Images/db_tot.png" alt="Curva do Cotovelo" width="435"/>
+</div>
+
+Abordagem, no qual, se teve o resultado mais satisfatorio em compração aos outros, no entanto, apresentando um número de clusters muito pequeno comparado a complexidade dos dados exposta nas analises anteriores. 
+1. Cluster com 5480 cidades, desbalanceado
+2. Cluster com municipio de São Paulo
+3. Cluster com 8 capitais brasileiras
+4. Cluster contentdo o municipio do Rio de janeiro
+
+   
+## Considerações Finais 
+Ao analisarmos os clusters formados por cada estratégia, observamos que eles variam conforme a abordagem de pré-processamento utilizada. Uma estratégia interessante para lidar com os outliers, a **Normalização pelo Atributo Total**, conseguiu capturar mais diferenças entre os dados ao trabalharmos com as proporções. No entanto, como foi mostrado anteriormente, os clusters formados apresentaram um grande desequilíbrio em todos os casos, evidenciando a complexidade de gerar agrupamentos significativos e consistentes, considerando apenas os dados de escolaridade e setor industrial. Isso indica a necessidade de uma abordagem mais sofisticada, que leve em conta as interações espaciais e geográficas, entre outras informações do município. Nesse sentido, uma alternativa interessante seria adotar uma das divisões propostas pelo **IBGE**, que pode fornecer uma estrutura de agrupamentos definidos pelo governo brasileiro.
