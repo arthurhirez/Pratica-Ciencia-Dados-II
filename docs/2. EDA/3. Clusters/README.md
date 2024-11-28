@@ -27,11 +27,20 @@ Para aprimorar a compreensão dos clusters formados, foi definido um novo *thres
 </p>
 <p align="center">
 
-Um ponto relevante é o contraste observado em relação aos resultados da análise **EDA Pessoas em Cada Nível Educacional** [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/2.%20EDA/2.%20EDA%20Pessoas%20em%20Cada%20Nivel%20Educacional), particularmente na seção de **Outliers**. Nessa análise, foi realizada uma tentativa preliminar de clusterização utilizando o algoritmo **KMeans** com dados exclusivamente educacionais, o que resultou em uma medida de silhueta que apontava dois clusters como ideais.
+Com o objetivo de determinar um número ideal de clusters cm base em uma métrica significativa, foi inicialmente empregada a medida de silhueta, sem a utilização da técnica de bootstrap — que será aplicada posteriormente para complementação da análise. Esse processo resultou na definição de 10 clusters.
 
-Por outro lado, ao incluir os dados do setor industrial e empregar o algoritmo de clusterização hierárquica, também baseado em distâncias, a análise indicou que o número ideal de clusters, com base na mesma medida de silhueta, como 10. Essa diferença se deve à incorporação das informações industriais, que desempenham um papel significativo na formação dos agrupamentos.
 <p align="center">
   <img src="Images/sil1.png" alt="Descrição da imagem" width="500"/>
 </p>
 <p align="center">
+
+Contudo, o resultado final não apresentou uma visualização satisfatória. Além disso, observou-se novamente a formação de clusters altamente desbalanceados, o que reforça a complexidade de agrupar os dados disponíveis. Alguns clusters mostraram-se extremamente grandes e internamente muito heterogêneos, com altas distâncias entre os elementos. Por outro lado, alguns clusters menores apresentaram-se mais limitados em tamanho, o que pode ser um indicativo da presença de ruídos nos dados analisados.
+
+<p align="center">
+  <img src="Images/dendo2.png" alt="Descrição da imagem" width="800"/>
+</p>
+<p align="center">
+
+Esse aspecto que também foi identificado nos resultados da análise **EDA Pessoas em Cada Nível Educacional** [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/2.%20EDA/2.%20EDA%20Pessoas%20em%20Cada%20Nivel%20Educacional), na seção de **Outliers**, no qual, evidenciou que a geração de clusters consistentes - utilizando o algoritmo **KMeans**, também baseado em distância - é um processo desafiador, quando se considera apenas os dados disponíveis, sem integrar o contexto espacial dos dados.
+
 
