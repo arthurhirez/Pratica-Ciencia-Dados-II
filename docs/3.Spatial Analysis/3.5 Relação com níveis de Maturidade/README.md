@@ -1,4 +1,3 @@
-<!-- 
 # Contexto do Projeto - Nível de Maturidade dos municípios
 A fim de comparar a capacidade de descrição do nível de maturidade das cidades, é criada uma visualização com a variável original (PIB *per capita*), e as estatísticas espaciais resultantes da análise anterior: os quartis regionais médios, o valor da diferença entre quartis considerando Domínio Estadual e R. Agregada e um índice criado a partir das contagens de *Hot/Cold spots* (cada valor de *Hot* equivale a +1, e *Cold* a -1, sendo feita a contagem total e soma dos valores). Em primeiro momento são analisadas as maturidades Econômica e Sociocultural. Uma segunda análise é feita considerando todos os tipos de maturidade, mas focando nas classes majoritarias.
 
@@ -33,7 +32,7 @@ Para verificar como as estatísticas espaciais se comportam em relação às cla
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Análise Temporal dos Quartis "Regionais"**
  <img src="../imgs/Nivel_tgt.gif" width="1000" />
 
-# Conclusão Quinta Etapa
+# Conclusão da quinta etapa
 É com satisfação que observa-se que o trabalho desenvolvido ao longo do projeto foi frutífero. As estatísticas espaciais derivadas da análise conseguem um bom poder de discriminação, por vezes melhores que a da variável original. Isso indica que, em certos cenários, a dinâmica de influência/relevância regional pode ter maior poder descritivo que o valor absoluto da variável em estudo. Por suposto, PIB *per capita* seria um bom descritor da Maturidade Econômica, mas nos casos não triviais (Maturidade Ambiental e Institucional), as relações regionais estudadas no presente projeto provaram seu valor ao transformar dados de outro domínio (econômico) para modelar relacões regionais, e com esses resultados discernir entre diferentes níveis de maturidade ambiental e instituicional.
 
 
