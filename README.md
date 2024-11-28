@@ -35,7 +35,8 @@ Scrap (?) + Proposta metodologia Visualização /Seleção -> resultados regress
   - Nas regiões Centro-Oeste e Sul, embora as distribuições relativas sejam parecidas, as relações com as variáveis do setor industrial são completamente distintas.
   - O mesmo ocorre entre os estados de Pernambuco (PE) e Rio Grande do Norte (RN).
 - O desbalanceamento dos dados e a presença de muitos "outliers" também são desafios. No entanto, os outliers, nem sempre podem ser considerados como ruídos, pois o Brasil é composto por um grande número de municípios, incluindo alguns com altas populações e concentração de capital.
-- Normalizar os dados de escolaridade e setor industrial pelos respectivos atributos Total, que representam a soma dos demais atributos, pode ser uma abordagem mais adequada do que outros métodos de normalização. Essa escolha é especialmente relevante devido à presença de outliers, já que técnicas como MinMax tendem a aproximar excessivamente os dados entre os extremos, influenciados por esses valores discrepantes.
+- Normalizar os dados de escolaridade e setor industrial pelos respectivos atributos Total, que representam a soma dos demais atributos, ou por outras abordagens como divisão pela popualçao total, pode ser uma abordagem mais adequada do que outros métodos de normalização devido à presença de outliers.
+  - Técnicas como MinMax são influenciados por valores discrepantes, de modo a tenderem a aproximar excessivamente os dados entre os extremos.
 
 ### Seção 3 - Análise Espacial (Spatial Analysis) [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/3.Spatial%20Analysis)
 O objetivo inicial seria modelar a distribuição regional de investimentos Federais, partindo da suposição que verbas aplicadas em uma cidade beneficiam seu entorno e da necessidade, dado que não são todas as cidades que recebem investimentos. Porém, no desenvolvimento do projeto foi considerado que os resultados não seriam representativos, o que levou à mudança de objetivo. A partir desse ponto, o estudo foi focado em estudar um método de como definir a influência regional das cidades, utilizando técnicas de GIS.
@@ -60,8 +61,10 @@ TODO: concluir alguma coisa
 ---
 
 ### Seção 2 - Análise Exploratória (EDA) [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/2.%20EDA)
-1. Análise do Comportamento do Nível Econômico sob uma Perspectiva Geográfica (10/09/2024 - 21/11/2024): [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/2.%20EDA/0.%20EDA%20Nivel%20Economico)
-2. Análises Exploratórias do Comportamento do Nível Econômico, Educacional e Setores Industriais (12/08/2024 - 21/11/2024): [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/2.%20EDA/0.%20EDA%20Nivel%20Economico)
+1. Análise do Comportamento do Nível Econômico sob uma Perspectiva Geográfica (12/08/2024 - 21/09/2024): [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/2.%20EDA/0.%20EDA%20Nivel%20Economico)
+2. Análises Exploratórias do Comportamento do Nível Econômico e Setores Industriais (19/09/2024 - 14/11/2024): [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/2.%20EDA/1.%20EDA/1.%20EDA%20Setor%20Industrial)
+3. Análises Exploratórias do Comportamento do Nível Econômico e Educacional (19/09/2024 - 14/11/2024): [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/2.%20EDA/2.%20EDA%20Pessoas%20em%20Cada%20Nivel%20Educacional)
+4. Clusterização e Análises dos dados Educacional e Setores Industriais (24/10/2024 - 21/11/2024): [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/2.%20EDA/3.%20Clusters)
 
 ---
 
