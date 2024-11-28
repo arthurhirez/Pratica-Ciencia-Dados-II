@@ -43,4 +43,9 @@ Contudo, o resultado final não apresentou uma visualização satisfatória. Al�
 
 Esse aspecto que também foi identificado nos resultados da análise **EDA Pessoas em Cada Nível Educacional** [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/2.%20EDA/2.%20EDA%20Pessoas%20em%20Cada%20Nivel%20Educacional), na seção de **Outliers**, no qual, evidenciou que a geração de clusters consistentes - utilizando o algoritmo **KMeans**, também baseado em distância - é um processo desafiador, quando se considera apenas os dados disponíveis, sem integrar o contexto espacial dos dados.
 
+## Bootstrap e Normalização MinMax
+
+## Boostrap e Normalização por Tamanho da Populção
+
+## Boostrap e Normalização pelo Feature Total
 
