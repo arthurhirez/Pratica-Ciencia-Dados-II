@@ -1,10 +1,6 @@
-GIT PySAL
-
 # Experimentos com biblioteca **PySAL**
 
 **Créditos e fonte dos códigos *Spatial lag:* ** https://pysal.org/esda/
-
-
 
 
 Nessa seção são exibidos os resultados de experimentos realizados para conhecer as funcionalidades da biblioteca Pysal, que implementa ferramentas de GIS (*Geographic Information System*). São utilizados tutoriais disponíveis na documentação da biblioteca, e é feita a referência à documentação original por sua completude, exemplos diversos e explicação detalhada sobre o método. Dessa maneira, o leitor tem acesso à uma material com implementação e vasta exploração da literatura - e pode explorar os outros módulos da biblioteca. [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/pysal/esda/blob/main/notebooks/Spatial%20Autocorrelation%20for%20Areal%20Unit%20Data.ipynb)
@@ -60,7 +56,7 @@ A partir das médias calculadas acima, é feita a ponderação conforme descrito
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *Hot/Cold spots* a partir da estatística $$I$$ de Moran
 <img src="../imgs/Espacial_demo_HC.png" alt="*Hot/COld spots* PIB *per capita* (2021)" width="850" height="800">
 
-# Conclusão Terceira Etapa
+# Conclusão da terceira etapa
 
 Considera-se que foi possível dominar, com certa confiança, as funcionalidades da biblioteca, e portanto esta será empregada no restante das análises. Nesse ponto do desenvolvimento do projeto, é tomada uma **decisão importante**. Os resultados exibidos acima não foram imediatos, e a curva de aprendizagem não foi tão suave, porém levantou uma questão importante. Para viabilizar fazer uma regressão a nível espacial, e inferir como valores de supostos benefícios de investimentos públicos seriam dsitribuídos e afetariam sua vizinhança, uma investigação mais aprofundada é necessária.
 
