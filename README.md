@@ -11,7 +11,7 @@ A última estratégia adota é focada na dinâmica de Influência/Relevância re
 
 ## Escolha do Tema e Conjunto de Dados
 
-O objetivo do trabalho (???????????????) é estudar como diferentes aspectos (indicadores econômicos/sociais/culturais/geográficos, etc) influenciam no nível de Maturidade dos municípios brasileiros, conforme definido na plataforma Inteli.gente (https://inteligente.mcti.gov.br/). Existem quatro níveis de Maturidade, como ilustrado abaixo para São Carlos, porém é tomada a decisão de focar na Maturidade Econômica (dada a escolha de dados desse domínio, como os relativos à emprego e investimentos públicos). Porém, ao longo do projeto, são feitas análises considerando os outros domínios, para testar a robustez das soluções.
+O objetivo do trabalho é estudar como diferentes aspectos (indicadores econômicos/sociais/culturais/geográficos, etc) influenciam no nível de Maturidade dos municípios brasileiros, conforme definido na plataforma Inteli.gente (https://inteligente.mcti.gov.br/). Existem quatro níveis de Maturidade, como ilustrado abaixo para São Carlos, porém é tomada a decisão de focar na Maturidade Econômica (dada a escolha de dados desse domínio, como os relativos à emprego e investimentos públicos). Porém, ao longo do projeto, são feitas análises considerando os outros domínios, para testar a robustez das soluções.
 
 <p align="center">
   <img src="images/inteli.gente.png" height="250" title="Exemplo da Cidade de São Carlos na Plataforma Inteli.Gente">
@@ -56,10 +56,11 @@ Para enriquecer o projeto, são utilizados dados de bases públicas, reunindo in
 ### Seção 3 - Análise Espacial (Spatial Analysis) [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/3.Spatial%20Analysis)
 O objetivo inicial seria modelar a distribuição regional de investimentos Federais, partindo da suposição que verbas aplicadas em uma cidade beneficiam seu entorno e da necessidade, dado que não são todas as cidades que recebem investimentos. Porém, no desenvolvimento do projeto foi considerado que os resultados não seriam representativos, o que levou à mudança de objetivo. A partir desse ponto, o estudo foi focado em estudar um método de como definir a influência regional das cidades, utilizando técnicas de GIS.
 
-TODO: concluir alguma coisa
+É definida a metodologia experimental, quais parâmetros e casos são contemplados, e é proposta uma nova região, intitulada Agregada. Estudando São Carlos em 2020, verifica-se que a metodologia produz reusltados coerentes, e nota-se os efeitos de suavização e detecção de Hot/Cold spots dada a variação de Domínio e vizinhança, sendo concluido que perspectiva é importante para definir a importância regional. A análise avança sobre a dinâmica da influência regional, considerando a dimensão de tempo, utilizando quartis regionais nas compararações.
 
-### Conclusão do projeto (acho que se fizer legal em cada seção não precisa repetir de novo)
+Por fim, é feita uma breve análise generalizando os quartis regionais, para PIB per capita e Investimentos. Sâo observados padrões interessantes, e toca-se na superfície de como correlacionar Investimentos com PIB per capita. Adicionalmente, é feita uma análise considerando Hot/Cold spots, e feita a introdução de uma nova métrica, que busca sintetizar a relação entre os Domínios considerados. 
 
+Apesar de não concluir o objetivo inicial (regressão espacial), foi possível desenvolver uma exploração da dinâmica de relevância regional, e trabalhos futuros podem aprofundar questões como a correlação entre diferentes variáveis (relacionando PIB per capita com ocupação da população e investimentos), e com esse resultado em mãos, avançar sobre o desafio de modelar o efeito de benefícios indiretos na vizinhança.
 
 ## Detalhamento das Análises
 
