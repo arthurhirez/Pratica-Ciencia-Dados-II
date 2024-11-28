@@ -25,7 +25,22 @@ Para enriquecer o projeto, são utilizados dados de bases públicas, reunindo in
 ## Principais resultados
 
 ### Seção 1 - Scrapping, Visualização e Seleção de Features [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/1.%20Scrapper)
-Scrap (?) + Proposta metodologia Visualização /Seleção -> resultados regressão
+
+- Para analisar os dados de maturidade das cidades, foi necessário primeiro a etapa de aquisição desses dados através da plataforma Inteli.Gente. Essa plataforma não possui implementada uma função para automatizar esse process. Por esse motivo, foi realizado um pequeno estudo sob a API de aquisição dos dados da plataforma, e implementado um script para download desses dados para cada uma das 5570 cidades do país.
+- Como os dados extraídos da plataforma eram dados de alta dimensionalidade (possuem muitos atributos), foi iniciado um estudo de como visualizar as relações implícitas do comportamento desses atributos. 
+	- Essa análise deu origem ao gráfico `KMeans Multi Scatter-plot 1D`, uma forma simples de encontrar padrões e correlações lineares e não-lineares em datasets com uma quantidade razoável de atributos, inspirada no Gráfico de Coordenadas Paralelas.
+	- No fim dessa análise, foi possível perceber que os atributos podem ser classificados dentre duas categorias: `Atributos Bem-Comportados` e `Atributos Mal-Comportados`. Ou seja, atributos que possuem um comportamento bem definido e pouco aleatório e atributos que não possuem.
+	- Também foi possível notar a presença de atributos com comportamento muito similar, provavelmente carregando a mesma informação para estimação do valor alvo.
+- O insight de que os atributos podem ser categorizados como bem-comportados e mal-comportados inspirou a próxima análise: Identificar atributos com comportamento aleatório ou determinístico. Para isso, foi conduzida uma pequena análise sob um método que utiliza a capacidade de compressão do algoritmo `gzip` para medir a aleatoriedade dos dados. A ideia é que dados aleatórios possuem poucos padrões, dessa forma o compactador possui dificuldade em reduzir o tamanho do arquivo final.
+	- Durante essa análise, foi possível perceber que a porcentagem de valores únicos no vetor representando um atributo possui influência logarítmica na capacidade de compressão dos dados pelo algoritmo compressor. Para anular essa influência, um fator de correção estimado pela fração de valores únicos nos dados foi utilizado. Essa fator foi estimado utilizando o método `Univariate Spline Interpolation`
+	- Após o desenvolvimento da métrica `Fator de Aleatoriedade`, foram iniciadas análises para entender como essa métrica se correlaciona com a `Entropia` dos dados. Nessas análises, ficou evidente que as duas métricas possuem forte correlação, mas ainda consegue capturar dinâmicas distintas.
+- Para selecionar os atributos que continham mais informações uteis, foi criado um espaço bidimensional, onde os eixos X e Y foram construídos pelas métricas `Fator de Aleatoriedade` e `Entropia de Shannon`. Nesse espaço, foram selecionados os atributos agrupados mais próximos do zero, indicando que ambas as técnicas identificaram os atributos como bem-comportados ou pouco aleatórios.
+	- Dentre os atributos agrupados como bem-comportados e mal-comportados, foram conduzidas análises de correlação para exclusão de grupos de atributos redundantes. Após essa análise, terminamos com 6 grupos de atributos: `Atributos Originais`, `Bem-Comportados`, `Mal-Comportados`, `Bem-Comportados e Pouco Correlacionados`, `Mal-Comportados e Pouco Correlacionados` e `Bem-Comportados + Mal-Comportados`.
+- Por fim, foram estudados a qualidade desses atributos para estimativa do nível de maturidade econômico das cidades. Os modelos testados foram: `Regressão Linear`, `SVR com Kernel Linear` e `SVR com Kernel Radial`. Esses modelos foram escolhidos para testar a capacidade descritiva de cada conjunto de atributos de forma linear e não-linear.
+	- Com essa análise, ficou claro que os atributos dos conjuntos `Bem Comportados` e `Bem Comportados e Pouco Correlacionados` são mais descritivos do que os conjuntos `Mal Comportados` e `Mal Comportados e Pouco Correlacionados`. Na maioria dos casos, a variante do conjunto com atributos pouco correlacionados não superou o conjunto de atributos original.
+	- O conjunto de atributos `Bem-Comportados + Mal-Comportados`, que junta os atributos selecionados após o filtro de correlação de ambos os grupos, se mostrou ideal quando a capacidade preditiva é prioridade.
+	- O conjunto de atributos `Mal-Comportados e Pouco Correlacionados` se mostrou ideal quando o menor número de atributos possível é prioridade. Apesar dos conjuntos de atributos `Bem-Comportados` serem mais descritivos, a diferença entre eles não é tão grande. No entanto, a diferença no número de atributos é grande.
+
 
 ### Seção 2 - Análise Exploratória (EDA) [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/2.%20EDA)
 - A investigação do nível de maturidade econômico por meio de análises e modelos no nível estadual pode apresentar resultados consistentes e satisfatórios.
@@ -35,8 +50,8 @@ Scrap (?) + Proposta metodologia Visualização /Seleção -> resultados regress
   - Nas regiões Centro-Oeste e Sul, embora as distribuições relativas sejam parecidas, as relações com as variáveis do setor industrial são completamente distintas.
   - O mesmo ocorre entre os estados de Pernambuco (PE) e Rio Grande do Norte (RN).
 - O desbalanceamento dos dados e a presença de muitos "outliers" também são desafios. No entanto, os outliers, nem sempre podem ser considerados como ruídos, pois o Brasil é composto por um grande número de municípios, incluindo alguns com altas populações e concentração de capital.
-- Normalizar os dados de escolaridade e setor industrial pelos respectivos atributos Total, que representam a soma dos demais atributos, ou por outras abordagens como divisão pela popualçao total, pode ser uma abordagem mais adequada do que outros métodos de normalização devido à presença de outliers.
-  - Técnicas como MinMax são influenciados por valores discrepantes, de modo a tenderem a aproximar excessivamente os dados entre os extremos.
+- Normalizar os dados de escolaridade e setor industrial por atributos como Total (soma dos demais atributos) ou pela população total pode ser uma abordagem mais adequada em alguns cenários do que métodos tradicionais, como MinMaxScaler ou StandardScaler, especialmente na presença de outliers.
+	- Técnicas como MinMaxScaler são sensíveis a valores discrepantes, tendendo a comprimir excessivamente os dados entre os extremos, o que pode distorcer a análise em determinados contextos.
 
 ### Seção 3 - Análise Espacial (Spatial Analysis) [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/3.Spatial%20Analysis)
 O objetivo inicial seria modelar a distribuição regional de investimentos Federais, partindo da suposição que verbas aplicadas em uma cidade beneficiam seu entorno e da necessidade, dado que não são todas as cidades que recebem investimentos. Porém, no desenvolvimento do projeto foi considerado que os resultados não seriam representativos, o que levou à mudança de objetivo. A partir desse ponto, o estudo foi focado em estudar um método de como definir a influência regional das cidades, utilizando técnicas de GIS.
@@ -65,6 +80,7 @@ TODO: concluir alguma coisa
 2. Análises Exploratórias do Comportamento do Nível Econômico e Setores Industriais: [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/2.%20EDA/1.%20EDA/1.%20EDA%20Setor%20Industrial)
 3. Análises Exploratórias do Comportamento do Nível Econômico e Educacional: [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/2.%20EDA/2.%20EDA%20Pessoas%20em%20Cada%20Nivel%20Educacional)
 4. Clusterização e Análises dos dados Educacional e Setores Industriais: [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/2.%20EDA/3.%20Clusters)
+5. Análise Preditiva a partir de diferentes granularidades: [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/2.%20EDA/4.%20Analise%20Inicial%20Preditiva)
 
 ---
 
@@ -74,11 +90,6 @@ TODO: concluir alguma coisa
 3.  Exploração biblioteca GIS - PySAL : [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/3.Spatial%20Analysis/3.3%20Estudo%20biblioteca%20Pysal)
 4. Dinâmica de Influência/Relevância regional [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/3.Spatial%20Analysis/3.4%20An%C3%A1lise%20Espacial) 
 5. Estatísticas Espaciais e Níveis de Maturidade: [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/Rafaelsoz/Pratica-Ciencia-Dados-II/tree/main/docs/3.Spatial%20Analysis/3.5%20Rela%C3%A7%C3%A3o%20com%20n%C3%ADveis%20de%20Maturidade)
-
-
-## Estudos futuros (????????) acho que nme precsa
-
-
 
 
 ## Links Rápidos para Acesso dos Notebooks pelo Google Colab:

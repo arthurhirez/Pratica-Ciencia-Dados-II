@@ -44,7 +44,7 @@ Este dataset contém informações de diversos setores econômicos por municípi
 
 ## Distribuição das Variáveis
 
-Para compreender a distribuição das variáveis numéricas, foi gerado um **gráfico de Violino**:
+Para compreender a distribuição das variáveis numéricas, foi gerado um **gráfico de BoxPlot**:
 
 <p align="center">
   <img src="Images/box1_renda.png" alt="BoxPlot das Variáveis Numéricas" width="800"/>
