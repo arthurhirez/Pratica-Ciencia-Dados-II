@@ -1,3 +1,8 @@
+# Visão do projeto
+
+A necessidade de aplicações de Aprendizado de Máquina auditáveis, em conformidade com a legislação do Brasil (Regulamento sobre o uso de IA - Projeto de Lei nº 2338/2023) e da União Europeia (*AI Act* para regulamentação sobre o uso da IA ​​a partir de 03/2024), por exemplo, demanda a busca por soluções que possam ser facilmente interpretáveis. Portanto, nesse projeto é dada especial atenção à documentação dos passos, à descrição detalhada das decisões e à checagem da coerência dos resultados. Desta maneira, o foco principal nas etapas foi utilizar as ferramentas e interpretar os resultados buscando informação, e não apenas números, como será observado no desenvolvimento do projeto.
+
+
 # Importação dos dados de Maturidade dos municípios da plataforma inteli.gente (MCTI)
 
 Plataforma do Ministério da Ciência, Tecnologia e Inovação (MCTI) que define cidades inteligentes como:
