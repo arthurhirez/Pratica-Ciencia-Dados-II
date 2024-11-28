@@ -47,5 +47,5 @@ Esse aspecto que também foi identificado nos resultados da análise **EDA Pesso
 
 ## Boostrap e Normalização por Tamanho da Populção
 
-## Boostrap e Normalização pelo Feature Total
+## Boostrap e Normalização pelo Atributo Total (Renda e Frequência)
 
