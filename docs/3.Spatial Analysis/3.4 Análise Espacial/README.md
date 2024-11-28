@@ -1,4 +1,3 @@
-<!-- 
 # Definição de novo objetivo - **Influência regional** 
 
 Nessa etapa do projeto, à época da execução, é tomada a decisão de abandonar o objetivo inicial, que seria definir uma metodologia para distribuir valores de investimentos, buscando modelar seu benefício para a população - e usar esses dados para inferir o nível de maturidade. Porém, conforme exposto na última seção, **não havia segurança sobre a significância dos resultados dessa abordagem** (seriam basicamente números sem garantia de significado), portanto é tomada a decisão de investigar a dinâmica de relevância regional nos municípios paulistas.
