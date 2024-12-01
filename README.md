@@ -1,4 +1,5 @@
 ![Inteli.Gente Banner](images/Inteli.Gente.Banner.png)
+Video de Apresentação do Projeto: [https://www.youtube.com/watch?v=IDXk4vXD3y4](https://www.youtube.com/watch?v=IDXk4vXD3y4)
 
 # SCC0957 - Prática em Ciência de Dados II
 
