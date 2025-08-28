@@ -34,8 +34,8 @@ Apesar de não concluir o objetivo inicial (regressão espacial), foi possível 
 
 &nbsp;&nbsp;&nbsp;&nbsp;Resultados 3.4 &nbsp;&nbsp; a) *Hot/Cold spots*  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b) Diferença entre quartis
 <p float="left">
-  <img src="docs/3.Spatial Analysis/imgs/base_pib_spot.gif" width="300" />
-  <img src="docs/3.Spatial Analysis/imgs/base_pib_diff.gif" width="300" /> 
+  <img src="docs/3.Spatial Analysis/imgs/base_pib_spot.gif" width="400" />
+  <img src="docs/3.Spatial Analysis/imgs/base_pib_diff.gif" width="400" /> 
 </p>
 
 
