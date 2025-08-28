@@ -32,10 +32,10 @@ Apesar de não concluir o objetivo inicial (regressão espacial), foi possível 
 5. Estatísticas Espaciais e Níveis de Maturidade: [![Open with GitHub](https://img.shields.io/badge/Open_In_GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/arthurhirez/Pratica-Ciencia-Dados-II/tree/main/docs/3.Spatial%20Analysis/3.5%20Rela%C3%A7%C3%A3o%20com%20n%C3%ADveis%20de%20Maturidade)
 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a) Resultados *Hot/Cold spots* considerando PIB *per capita* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b) Resultados Diferença entre quartis **Agregada - Estadual**
+&nbsp;&nbsp;&nbsp;&nbsp;Resultados 3.4 &nbsp;&nbsp; a) *Hot/Cold spots*  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b) Diferença entre quartis
 <p float="left">
-  <img src="docs/3.Spatial Analysis/imgs/base_pib_spot.gif" width="500" />
-  <img src="docs/3.Spatial Analysis/imgs/base_pib_diff.gif" width="500" /> 
+  <img src="docs/3.Spatial Analysis/imgs/base_pib_spot.gif" width="300" />
+  <img src="docs/3.Spatial Analysis/imgs/base_pib_diff.gif" width="300" /> 
 </p>
 
 
